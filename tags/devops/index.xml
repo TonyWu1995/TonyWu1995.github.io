@@ -5,7 +5,16 @@
     <link>http://tonywu1995.github.io/tags/devops/</link>
     <description>Recent content in devops on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Sep 2021 16:45:55 +0800</lastBuildDate><atom:link href="http://tonywu1995.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Sep 2021 17:06:57 +0800</lastBuildDate><atom:link href="http://tonywu1995.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ngork</title>
+      <link>http://tonywu1995.github.io/devops/ngork/</link>
+      <pubDate>Tue, 21 Sep 2021 17:06:57 +0800</pubDate>
+      
+      <guid>http://tonywu1995.github.io/devops/ngork/</guid>
+      <description>介紹  在本機上開發的時候常常遇到需要https和domain name的狀況，例如:Line Bot的webhook測試，這時候使用ngrok就可以解決這個問題，ngork賦予你一個暫時domain name和https  安裝 Windows choco install ngrokMac brew install ngrok在本機上登入ngork(使用token認證) ngrok authtoken &amp;lt;token&amp;gt;使用 ngrok http &amp;lt;Port&amp;gt;參考連結  ngork  </description>
+    </item>
+    
     <item>
       <title>Mongo備份與還原</title>
       <link>http://tonywu1995.github.io/devops/mongo_backup_restore/</link>

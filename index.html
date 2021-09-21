@@ -166,6 +166,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Mongo備份與還原
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;參考連結  Mongo  </p>
+  </section>
+  <footer class="entry-footer">2021-09-21 September Tuesday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony</footer>
+  <a class="entry-link" aria-label="post link to Mongo備份與還原" href="http://tonywu1995.github.io/devops/mongo_backup_restore/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Sdkman
     </h2>
   </header>

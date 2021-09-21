@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Sdkman | Tony Wu&#39;s Blog</title>
-<meta name="keywords" content="devops" />
-<meta name="description" content="介紹  SDKMAN是一款基於Linux/Mac的SDK管理工具，可以管理多個版本JDK，也可以安裝與JDK相容的套件  安裝SDKMAN $ curl -s &quot;https://get.sdkman.io&quot; | bash$ source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;sdk version&gt; sdkman 5.0.0&#43;51 羅列Java版本 sdk list java安裝JAVA sdk install java x.y.z-open移除 sdk uninstall java ...指定預設JAVA sdk default java 11 參考連結  SDKMAN  ">
+<title>Mongo備份與還原 | Tony Wu&#39;s Blog</title>
+<meta name="keywords" content="devops, mongo" />
+<meta name="description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;參考連結  Mongo  ">
 <meta name="author" content="Tony">
-<link rel="canonical" href="http://tonywu1995.github.io/devops/skdman/" />
+<link rel="canonical" href="http://tonywu1995.github.io/devops/mongo_backup_restore/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -57,16 +57,16 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Sdkman" />
-<meta property="og:description" content="介紹  SDKMAN是一款基於Linux/Mac的SDK管理工具，可以管理多個版本JDK，也可以安裝與JDK相容的套件  安裝SDKMAN $ curl -s &quot;https://get.sdkman.io&quot; | bash$ source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;sdk version&gt; sdkman 5.0.0&#43;51 羅列Java版本 sdk list java安裝JAVA sdk install java x.y.z-open移除 sdk uninstall java ...指定預設JAVA sdk default java 11 參考連結  SDKMAN  " />
+</noscript><meta property="og:title" content="Mongo備份與還原" />
+<meta property="og:description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;參考連結  Mongo  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://tonywu1995.github.io/devops/skdman/" /><meta property="article:section" content="devops" />
-<meta property="article:published_time" content="2021-09-21T15:46:52&#43;08:00" />
-<meta property="article:modified_time" content="2021-09-21T15:46:52&#43;08:00" />
+<meta property="og:url" content="http://tonywu1995.github.io/devops/mongo_backup_restore/" /><meta property="article:section" content="devops" />
+<meta property="article:published_time" content="2021-09-21T16:45:55&#43;08:00" />
+<meta property="article:modified_time" content="2021-09-21T16:45:55&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sdkman"/>
-<meta name="twitter:description" content="介紹  SDKMAN是一款基於Linux/Mac的SDK管理工具，可以管理多個版本JDK，也可以安裝與JDK相容的套件  安裝SDKMAN $ curl -s &quot;https://get.sdkman.io&quot; | bash$ source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;sdk version&gt; sdkman 5.0.0&#43;51 羅列Java版本 sdk list java安裝JAVA sdk install java x.y.z-open移除 sdk uninstall java ...指定預設JAVA sdk default java 11 參考連結  SDKMAN  "/>
+<meta name="twitter:title" content="Mongo備份與還原"/>
+<meta name="twitter:description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;參考連結  Mongo  "/>
 
 
 <script type="application/ld+json">
@@ -83,8 +83,8 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Sdkman",
-      "item": "http://tonywu1995.github.io/devops/skdman/"
+      "name": "Mongo備份與還原",
+      "item": "http://tonywu1995.github.io/devops/mongo_backup_restore/"
     }
   ]
 }
@@ -93,24 +93,24 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Sdkman",
-  "name": "Sdkman",
-  "description": "介紹  SDKMAN是一款基於Linux/Mac的SDK管理工具，可以管理多個版本JDK，也可以安裝與JDK相容的套件  安裝SDKMAN $ curl -s \u0026quot;https://get.sdkman.io\u0026quot; | bash\r$ source \u0026quot;$HOME/.sdkman/bin/sdkman-init.sh\u0026quot;\rsdk version\r\u0026gt; sdkman 5.0.0+51 羅列Java版本 sdk list java\r安裝JAVA sdk install java x.y.z-open\r移除 sdk uninstall java ...\r指定預設JAVA sdk default java 11 參考連結  SDKMAN  ",
+  "headline": "Mongo備份與還原",
+  "name": "Mongo備份與還原",
+  "description": "介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u \u0026lt;username\u0026gt; -p \u0026lt;password\u0026gt;\r切換db  use admin\r磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})\r確認是否上鎖  db.currentOp()\r備份資料  mongodump --host \u0026lt;host-ip\u0026gt; --port 27017 --db \u0026lt;database\u0026gt; --authenticationDatabase admin --username \u0026lt;username\u0026gt; --password \u0026lt;password\u0026gt; --out \u0026lt;Path\u0026gt;\r解鎖  db.fsyncUnlock()\r還原步驟  還原  mongorestore --host \u0026lt;host-ip\u0026gt; --port 27017 --username \u0026lt;username\u0026gt; --password \u0026lt;password\u0026gt; --db \u0026lt;database\u0026gt; \u0026lt;backup file path\u0026gt;\r參考連結  Mongo  ",
   "keywords": [
-    "devops"
+    "devops", "mongo"
   ],
-  "articleBody": "介紹  SDKMAN是一款基於Linux/Mac的SDK管理工具，可以管理多個版本JDK，也可以安裝與JDK相容的套件  安裝SDKMAN $ curl -s \"https://get.sdkman.io\" | bash\r$ source \"$HOME/.sdkman/bin/sdkman-init.sh\"\rsdk version\r sdkman 5.0.0+51 羅列Java版本 sdk list java\r安裝JAVA sdk install java x.y.z-open\r移除 sdk uninstall java ...\r指定預設JAVA sdk default java 11 參考連結  SDKMAN  ",
-  "wordCount" : "38",
+  "articleBody": "介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u  -p \r切換db  use admin\r磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})\r確認是否上鎖  db.currentOp()\r備份資料  mongodump --host  --port 27017 --db  --authenticationDatabase admin --username  --password  --out \r解鎖  db.fsyncUnlock()\r還原步驟  還原  mongorestore --host  --port 27017 --username  --password  --db  參考連結  Mongo  ",
+  "wordCount" : "52",
   "inLanguage": "zh-tw",
-  "datePublished": "2021-09-21T15:46:52+08:00",
-  "dateModified": "2021-09-21T15:46:52+08:00",
+  "datePublished": "2021-09-21T16:45:55+08:00",
+  "dateModified": "2021-09-21T16:45:55+08:00",
   "author":{
     "@type": "Person",
     "name": "Tony"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://tonywu1995.github.io/devops/skdman/"
+    "@id": "http://tonywu1995.github.io/devops/mongo_backup_restore/"
   },
   "publisher": {
     "@type": "Organization",
@@ -198,32 +198,48 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="http://tonywu1995.github.io/">Home</a>&nbsp;»&nbsp;<a href="http://tonywu1995.github.io/devops/">Devops</a></div>
     <h1 class="post-title">
-      Sdkman
+      Mongo備份與還原
     </h1>
     <div class="post-meta">2021-09-21 September Tuesday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony
 </div>
   </header> 
   <div class="post-content"><h1 id="介紹">介紹<a hidden class="anchor" aria-hidden="true" href="#介紹">#</a></h1>
 <ul>
-<li><a href="https://sdkman.io/">SDKMAN</a>是一款基於Linux/Mac的SDK管理工具，可以管理多個版本JDK，也可以安裝與JDK相容的套件</li>
+<li>在工作上不免要定期備份database的資料與還原datdabase的資料</li>
 </ul>
-<h2 id="安裝sdkman">安裝SDKMAN<a hidden class="anchor" aria-hidden="true" href="#安裝sdkman">#</a></h2>
-<pre tabindex="0"><code>$ curl -s &quot;https://get.sdkman.io&quot; | bash
-$ source &quot;$HOME/.sdkman/bin/sdkman-init.sh&quot;
-sdk version
-&gt; sdkman 5.0.0+51  
-</code></pre><h2 id="羅列java版本">羅列Java版本<a hidden class="anchor" aria-hidden="true" href="#羅列java版本">#</a></h2>
-<pre tabindex="0"><code>sdk list java
-
-</code></pre><h2 id="安裝java">安裝JAVA<a hidden class="anchor" aria-hidden="true" href="#安裝java">#</a></h2>
-<pre tabindex="0"><code>sdk install java x.y.z-open
-</code></pre><h2 id="移除">移除<a hidden class="anchor" aria-hidden="true" href="#移除">#</a></h2>
-<pre tabindex="0"><code>sdk uninstall java ...
-</code></pre><h2 id="指定預設java">指定預設JAVA<a hidden class="anchor" aria-hidden="true" href="#指定預設java">#</a></h2>
-<pre tabindex="0"><code>sdk default java 11 
+<h2 id="備份步驟">備份步驟<a hidden class="anchor" aria-hidden="true" href="#備份步驟">#</a></h2>
+<ol>
+<li>連線進入mongo</li>
+</ol>
+<pre tabindex="0"><code>mongo -u &lt;username&gt; -p &lt;password&gt;
+</code></pre><ol start="2">
+<li>切換db</li>
+</ol>
+<pre tabindex="0"><code>use admin
+</code></pre><ol start="3">
+<li>磁碟同步與上鎖</li>
+</ol>
+<pre tabindex="0"><code>db.runCommand({fsync:1,lock:1})
+</code></pre><ol start="4">
+<li>確認是否上鎖</li>
+</ol>
+<pre tabindex="0"><code>db.currentOp()
+</code></pre><ol start="5">
+<li>備份資料</li>
+</ol>
+<pre tabindex="0"><code>mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt;  --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;
+</code></pre><ol start="6">
+<li>解鎖</li>
+</ol>
+<pre tabindex="0"><code>db.fsyncUnlock()
+</code></pre><h2 id="還原步驟">還原步驟<a hidden class="anchor" aria-hidden="true" href="#還原步驟">#</a></h2>
+<ol>
+<li>還原</li>
+</ol>
+<pre tabindex="0"><code>mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;
 </code></pre><h1 id="參考連結">參考連結<a hidden class="anchor" aria-hidden="true" href="#參考連結">#</a></h1>
 <ul>
-<li><a href="https://sdkman.io/">SDKMAN</a></li>
+<li><a href="https://docs.mongodb.com/">Mongo</a></li>
 </ul>
 
 
@@ -232,12 +248,13 @@ sdk version
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="http://tonywu1995.github.io/tags/devops/">devops</a></li>
+      <li><a href="http://tonywu1995.github.io/tags/mongo/">mongo</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://tonywu1995.github.io/devops/mongo_backup_restore/">
-    <span class="title">« </span>
+  <a class="next" href="http://tonywu1995.github.io/devops/skdman/">
+    <span class="title"> »</span>
     <br>
-    <span>Mongo備份與還原</span>
+    <span>Sdkman</span>
   </a>
 </nav>
 

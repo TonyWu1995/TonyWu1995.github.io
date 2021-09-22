@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tony Wu&#39;s Blog</title>
-    <link>http://tonywu1995.github.io/</link>
+    <link>https://tonywu1995.github.io/</link>
     <description>Recent content on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Sep 2021 17:06:57 +0800</lastBuildDate><atom:link href="http://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Sep 2021 17:06:57 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ngork</title>
-      <link>http://tonywu1995.github.io/devops/ngork/</link>
+      <link>https://tonywu1995.github.io/devops/ngork/</link>
       <pubDate>Tue, 21 Sep 2021 17:06:57 +0800</pubDate>
       
-      <guid>http://tonywu1995.github.io/devops/ngork/</guid>
+      <guid>https://tonywu1995.github.io/devops/ngork/</guid>
       <description>介紹  在本機上開發的時候常常遇到需要https和domain name的狀況，例如:Line Bot的webhook測試，這時候使用ngrok就可以解決這個問題，ngork賦予你一個暫時domain name和https  安裝 Windows choco install ngrokMac brew install ngrok在本機上登入ngork(使用token認證) ngrok authtoken &amp;lt;token&amp;gt;使用 ngrok http &amp;lt;Port&amp;gt;參考連結  ngork  </description>
     </item>
     
     <item>
       <title>Mongo備份與還原</title>
-      <link>http://tonywu1995.github.io/devops/mongo_backup_restore/</link>
+      <link>https://tonywu1995.github.io/devops/mongo_backup_restore/</link>
       <pubDate>Tue, 21 Sep 2021 16:45:55 +0800</pubDate>
       
-      <guid>http://tonywu1995.github.io/devops/mongo_backup_restore/</guid>
+      <guid>https://tonywu1995.github.io/devops/mongo_backup_restore/</guid>
       <description>介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &amp;lt;username&amp;gt; -p &amp;lt;password&amp;gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &amp;lt;host-ip&amp;gt; --port 27017 --db &amp;lt;database&amp;gt; --authenticationDatabase admin --username &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; --out &amp;lt;Path&amp;gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &amp;lt;host-ip&amp;gt; --port 27017 --username &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; --db &amp;lt;database&amp;gt; &amp;lt;backup file path&amp;gt;參考連結  Mongo  </description>
     </item>
     
     <item>
       <title>Sdkman</title>
-      <link>http://tonywu1995.github.io/devops/skdman/</link>
+      <link>https://tonywu1995.github.io/devops/skdman/</link>
       <pubDate>Tue, 21 Sep 2021 15:46:52 +0800</pubDate>
       
-      <guid>http://tonywu1995.github.io/devops/skdman/</guid>
+      <guid>https://tonywu1995.github.io/devops/skdman/</guid>
       <description>介紹  SDKMAN是一款基於Linux/Mac的SDK管理工具，可以管理多個版本JDK，也可以安裝與JDK相容的套件  安裝SDKMAN $ curl -s &amp;quot;https://get.sdkman.io&amp;quot; | bash$ source &amp;quot;$HOME/.sdkman/bin/sdkman-init.sh&amp;quot;sdk version&amp;gt; sdkman 5.0.0+51 羅列Java版本 sdk list java安裝JAVA sdk install java x.y.z-open移除 sdk uninstall java ...指定預設JAVA sdk default java 11 參考連結  SDKMAN  </description>
     </item>
     

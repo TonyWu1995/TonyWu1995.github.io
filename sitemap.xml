@@ -2,66 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://tonywu1995.github.io/categories/</loc>
+    <loc>https://tonywu1995.github.io/categories/</loc>
     <lastmod>2021-09-21T17:06:57+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/devops/</loc>
+    <loc>https://tonywu1995.github.io/devops/</loc>
     <lastmod>2021-09-21T17:06:57+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/tags/devops/</loc>
+    <loc>https://tonywu1995.github.io/tags/devops/</loc>
     <lastmod>2021-09-21T17:06:57+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/categories/devops/</loc>
+    <loc>https://tonywu1995.github.io/categories/devops/</loc>
     <lastmod>2021-09-21T17:06:57+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/devops/ngork/</loc>
+    <loc>https://tonywu1995.github.io/devops/ngork/</loc>
     <lastmod>2021-09-21T17:06:57+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/tags/</loc>
+    <loc>https://tonywu1995.github.io/tags/</loc>
     <lastmod>2021-09-21T17:06:57+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/</loc>
+    <loc>https://tonywu1995.github.io/</loc>
     <lastmod>2021-09-21T17:06:57+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/tags/mongo/</loc>
+    <loc>https://tonywu1995.github.io/tags/mongo/</loc>
     <lastmod>2021-09-21T16:45:55+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/categories/mongo/</loc>
+    <loc>https://tonywu1995.github.io/categories/mongo/</loc>
     <lastmod>2021-09-21T16:45:55+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/devops/mongo_backup_restore/</loc>
+    <loc>https://tonywu1995.github.io/devops/mongo_backup_restore/</loc>
     <lastmod>2021-09-21T16:45:55+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/devops/skdman/</loc>
+    <loc>https://tonywu1995.github.io/devops/skdman/</loc>
     <lastmod>2021-09-21T15:46:52+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/archives/</loc>
+    <loc>https://tonywu1995.github.io/archives/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://tonywu1995.github.io/search/</loc>
+    <loc>https://tonywu1995.github.io/search/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

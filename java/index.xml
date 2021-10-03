@@ -5,7 +5,16 @@
     <link>https://tonywu1995.github.io/java/</link>
     <description>Recent content in Javae on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 22 Sep 2021 22:47:52 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Oct 2021 16:25:57 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring Boot監控(中)</title>
+      <link>https://tonywu1995.github.io/java/spring-boot-monitor-2/</link>
+      <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/java/spring-boot-monitor-2/</guid>
+      <description>步驟 安裝Prometheus/Grafana  設定Prometheus設定向我們spring boot application位置  # my global configglobal:scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:# The job name is added as a label `job=&amp;lt;job_name&amp;gt;` to any timeseries scraped from this config.- job_name: &#39;My-Spring-Boot-Application&#39;# Override the global default and scrape targets from this job every 5 seconds.</description>
+    </item>
+    
     <item>
       <title>Spring Boot監控(上)</title>
       <link>https://tonywu1995.github.io/java/spring-boot-monitor-1/</link>

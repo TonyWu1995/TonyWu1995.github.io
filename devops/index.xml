@@ -5,7 +5,16 @@
     <link>https://tonywu1995.github.io/devops/</link>
     <description>Recent content in Devops on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Sep 2021 17:06:57 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Oct 2021 16:25:57 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node_Exporter</title>
+      <link>https://tonywu1995.github.io/devops/node_exporter/</link>
+      <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/devops/node_exporter/</guid>
+      <description>前言  node exporter是用來監控Linux vm的一個Prometheus Client  提供: CPU 使用率、硬碟使用率&amp;hellip; metrics    步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bashversion=&amp;quot;${VERSION:-1.2.2}&amp;quot;arch=&amp;quot;${ARCH:-linux-amd64}&amp;quot;bin_dir=&amp;quot;${BIN_DIR:-/usr/local/bin}&amp;quot;wget &amp;quot;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&amp;quot; \-O /tmp/node_exporter.tar.gzmkdir -p /tmp/node_exportercd /tmp || { echo &amp;quot;ERROR! No /tmp found..&amp;quot;; exit 1; }tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &amp;quot;ERROR! Extracting the node_exporter tar&amp;quot;; exit 1; }sudo cp &amp;quot;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&amp;quot; &amp;quot;$bin_dir&amp;quot;chown root:staff &amp;quot;$bin_dir/node_exporter&amp;quot;sudo cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/systemd/system/node_exporter.service[Unit]Description=Node ExporterAfter=network.</description>
+    </item>
+    
     <item>
       <title>Ngork</title>
       <link>https://tonywu1995.github.io/devops/ngork/</link>

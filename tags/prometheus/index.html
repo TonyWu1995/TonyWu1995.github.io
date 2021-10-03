@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>spring | Tony Wu&#39;s Blog</title>
+<title>prometheus | Tony Wu&#39;s Blog</title>
 <meta name="keywords" content="" />
 <meta name="description" content="工作上收集整理使用的工具與筆記">
 <meta name="author" content="Tony">
-<link rel="canonical" href="https://tonywu1995.github.io/tags/spring/" />
+<link rel="canonical" href="https://tonywu1995.github.io/tags/prometheus/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://tonywu1995.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://tonywu1995.github.io/favicon-16x16.png">
@@ -19,7 +19,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.88.1" />
-<link rel="alternate" type="application/rss+xml" href="https://tonywu1995.github.io/tags/spring/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://tonywu1995.github.io/tags/prometheus/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,13 +56,13 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="spring" />
+</noscript><meta property="og:title" content="prometheus" />
 <meta property="og:description" content="工作上收集整理使用的工具與筆記" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://tonywu1995.github.io/tags/spring/" />
+<meta property="og:url" content="https://tonywu1995.github.io/tags/prometheus/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="spring"/>
+<meta name="twitter:title" content="prometheus"/>
 <meta name="twitter:description" content="工作上收集整理使用的工具與筆記"/>
 
 </head>
@@ -137,8 +137,20 @@
 </header>
 <main class="main"> 
 <header class="page-header">
-  <h1>spring</h1>
+  <h1>prometheus</h1>
 </header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Node_Exporter
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>前言  node exporter是用來監控Linux vm的一個Prometheus Client  提供: CPU 使用率、硬碟使用率… metrics    步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bashversion=&#34;${VERSION:-1.2.2}&#34;arch=&#34;${ARCH:-linux-amd64}&#34;bin_dir=&#34;${BIN_DIR:-/usr/local/bin}&#34;wget &#34;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&#34; \-O /tmp/node_exporter.tar.gzmkdir -p /tmp/node_exportercd /tmp || { echo &#34;ERROR! No /tmp found..&#34;; exit 1; }tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &#34;ERROR! Extracting the node_exporter tar&#34;; exit 1; }sudo cp &#34;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&#34; &#34;$bin_dir&#34;chown root:staff &#34;$bin_dir/node_exporter&#34;sudo cat &lt;&lt;EOF &gt; /etc/systemd/system/node_exporter.service[Unit]Description=Node ExporterAfter=network....</p>
+  </section>
+  <footer class="entry-footer">2021-10-03 October Sunday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony</footer>
+  <a class="entry-link" aria-label="post link to Node_Exporter" href="https://tonywu1995.github.io/devops/node_exporter/"></a>
+</article>
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
@@ -150,18 +162,6 @@
   </section>
   <footer class="entry-footer">2021-10-03 October Sunday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony</footer>
   <a class="entry-link" aria-label="post link to Spring Boot監控(中)" href="https://tonywu1995.github.io/java/spring-boot-monitor-2/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2>Spring Boot監控(上)
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>前言  常在河邊走那裡不失鞋，當一個後端工程師，常常會遇到上線Application server突然無法壞掉的問題，因此我們需要一個監控的Server來輔助我們上線的Application，本篇將使用Prometheus監控server當作範例來做為展示  步驟 Spring boot 安裝Prometheus Client  在pom.xml上新增兩個dependency  spring-boot-starter-actuator: spring boot內建的監控library micrometer-registry-prometheus: 在spring boot上提供prometheus metrics格式     &lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;io.micrometer&lt;/groupId&gt;&lt;artifactId&gt;micrometer-registry-prometheus&lt;/artifactId&gt;&lt;/dependency&gt;Spring boot 調整設定檔  在applcation.yml 新增下列設定  management:endpoint:health:show-details: alwaysprometheus:enabled: trueendpoints:web:exposure:include: prometheus,healthmetrics:tags:application: ${spring.application.name}health:diskspace:enabled: truedefaults:enabled: false 設定好，啟動spring boot即可在http://:/actuator/prometheus看到metrics  參考連結  Spring boot Spring boot Actuator Micrometer Registry Prometheus  </p>
-  </section>
-  <footer class="entry-footer">2021-09-22 September Wednesday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony</footer>
-  <a class="entry-link" aria-label="post link to Spring Boot監控(上)" href="https://tonywu1995.github.io/java/spring-boot-monitor-1/"></a>
 </article>
     </main>
     

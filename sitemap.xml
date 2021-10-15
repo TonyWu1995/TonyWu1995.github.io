@@ -2,117 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tonywu1995.github.io/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/devops/</loc>
+    <loc>/devops/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/tags/devops/</loc>
+    <loc>/tags/devops/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/categories/devops/</loc>
+    <loc>/categories/devops/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/tags/java/</loc>
+    <loc>/tags/java/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/categories/java/</loc>
+    <loc>/categories/java/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/java/</loc>
+    <loc>/java/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/devops/node_exporter/</loc>
+    <loc>/devops/node_exporter/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/tags/prometheus/</loc>
+    <loc>/tags/prometheus/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/categories/prometheus/</loc>
+    <loc>/categories/prometheus/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/tags/spring/</loc>
+    <loc>/tags/spring/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/categories/spring/</loc>
+    <loc>/categories/spring/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/java/spring-boot-monitor-2/</loc>
+    <loc>/java/spring-boot-monitor-2/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/java/spring-boot-monitor-1/</loc>
+    <loc>/java/spring-boot-monitor-1/</loc>
     <lastmod>2021-09-22T22:47:52+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/devops/ngork/</loc>
+    <loc>/devops/ngork/</loc>
     <lastmod>2021-09-21T17:06:57+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/tags/mongo/</loc>
+    <loc>/tags/mongo/</loc>
     <lastmod>2021-09-21T16:45:55+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/categories/mongo/</loc>
+    <loc>/categories/mongo/</loc>
     <lastmod>2021-09-21T16:45:55+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/devops/mongo_backup_restore/</loc>
+    <loc>/devops/mongo_backup_restore/</loc>
     <lastmod>2021-09-21T16:45:55+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/devops/skdman/</loc>
+    <loc>/devops/skdman/</loc>
     <lastmod>2021-09-21T15:46:52+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/archives/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <loc>/archives/</loc>
+    <priority>0.75</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/search/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
+    <loc>/search/</loc>
+    <priority>0.75</priority>
   </url>
 </urlset>

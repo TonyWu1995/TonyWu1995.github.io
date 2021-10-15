@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Tony Wu&#39;s Blog</title>
-    <link>https://tonywu1995.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Oct 2021 16:25:57 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Oct 2021 16:25:57 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>devops</title>
-      <link>https://tonywu1995.github.io/tags/devops/</link>
+      <link>/tags/devops/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/tags/devops/</guid>
+      <guid>/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>https://tonywu1995.github.io/tags/java/</link>
+      <link>/tags/java/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/tags/java/</guid>
+      <guid>/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>prometheus</title>
-      <link>https://tonywu1995.github.io/tags/prometheus/</link>
+      <link>/tags/prometheus/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/tags/prometheus/</guid>
+      <guid>/tags/prometheus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spring</title>
-      <link>https://tonywu1995.github.io/tags/spring/</link>
+      <link>/tags/spring/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/tags/spring/</guid>
+      <guid>/tags/spring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mongo</title>
-      <link>https://tonywu1995.github.io/tags/mongo/</link>
+      <link>/tags/mongo/</link>
       <pubDate>Tue, 21 Sep 2021 16:45:55 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/tags/mongo/</guid>
+      <guid>/tags/mongo/</guid>
       <description></description>
     </item>
     

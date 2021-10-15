@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Tony Wu&#39;s Blog</title>
-    <link>https://tonywu1995.github.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Oct 2021 16:25:57 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Oct 2021 16:25:57 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>devops</title>
-      <link>https://tonywu1995.github.io/categories/devops/</link>
+      <link>/categories/devops/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/categories/devops/</guid>
+      <guid>/categories/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>https://tonywu1995.github.io/categories/java/</link>
+      <link>/categories/java/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/categories/java/</guid>
+      <guid>/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>prometheus</title>
-      <link>https://tonywu1995.github.io/categories/prometheus/</link>
+      <link>/categories/prometheus/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/categories/prometheus/</guid>
+      <guid>/categories/prometheus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spring</title>
-      <link>https://tonywu1995.github.io/categories/spring/</link>
+      <link>/categories/spring/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/categories/spring/</guid>
+      <guid>/categories/spring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mongo</title>
-      <link>https://tonywu1995.github.io/categories/mongo/</link>
+      <link>/categories/mongo/</link>
       <pubDate>Tue, 21 Sep 2021 16:45:55 +0800</pubDate>
       
-      <guid>https://tonywu1995.github.io/categories/mongo/</guid>
+      <guid>/categories/mongo/</guid>
       <description></description>
     </item>
     

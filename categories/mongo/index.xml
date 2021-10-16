@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>mongo on Tony Wu&#39;s Blog</title>
-    <link>/categories/mongo/</link>
+    <link>tonywu1995.github.io/categories/mongo/</link>
     <description>Recent content in mongo on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Sep 2021 16:45:55 +0800</lastBuildDate><atom:link href="/categories/mongo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Sep 2021 16:45:55 +0800</lastBuildDate><atom:link href="tonywu1995.github.io/categories/mongo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mongo備份與還原</title>
-      <link>/devops/mongo_backup_restore/</link>
+      <link>tonywu1995.github.io/devops/mongo_backup_restore/</link>
       <pubDate>Tue, 21 Sep 2021 16:45:55 +0800</pubDate>
       
-      <guid>/devops/mongo_backup_restore/</guid>
+      <guid>tonywu1995.github.io/devops/mongo_backup_restore/</guid>
       <description>介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &amp;lt;username&amp;gt; -p &amp;lt;password&amp;gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &amp;lt;host-ip&amp;gt; --port 27017 --db &amp;lt;database&amp;gt; --authenticationDatabase admin --username &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; --out &amp;lt;Path&amp;gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &amp;lt;host-ip&amp;gt; --port 27017 --username &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; --db &amp;lt;database&amp;gt; &amp;lt;backup file path&amp;gt;參考連結  Mongo  </description>
     </item>
     

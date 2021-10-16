@@ -9,15 +9,15 @@
 <meta name="keywords" content="devops, mongo" />
 <meta name="description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;參考連結  Mongo  ">
 <meta name="author" content="Tony">
-<link rel="canonical" href="tonywu1995.github.io/devops/mongo_backup_restore/" />
-<link crossorigin="anonymous" href="/tonywu1995.github.io/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/tonywu1995.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<link rel="canonical" href="https://tonywu1995.github.io/devops/mongo_backup_restore/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="tonywu1995.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="tonywu1995.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="tonywu1995.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="tonywu1995.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="tonywu1995.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="https://tonywu1995.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tonywu1995.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tonywu1995.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://tonywu1995.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tonywu1995.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.88.1" />
@@ -60,7 +60,7 @@
 </noscript><meta property="og:title" content="Mongo備份與還原" />
 <meta property="og:description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;參考連結  Mongo  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="tonywu1995.github.io/devops/mongo_backup_restore/" /><meta property="article:section" content="devops" />
+<meta property="og:url" content="https://tonywu1995.github.io/devops/mongo_backup_restore/" /><meta property="article:section" content="devops" />
 <meta property="article:published_time" content="2021-09-21T16:45:55&#43;08:00" />
 <meta property="article:modified_time" content="2021-09-21T16:45:55&#43;08:00" />
 
@@ -78,13 +78,13 @@
       "@type": "ListItem",
       "position":  2 ,
       "name": "Devops",
-      "item": "tonywu1995.github.io/devops/"
+      "item": "https://tonywu1995.github.io/devops/"
     }, 
     {
       "@type": "ListItem",
       "position":  3 ,
       "name": "Mongo備份與還原",
-      "item": "tonywu1995.github.io/devops/mongo_backup_restore/"
+      "item": "https://tonywu1995.github.io/devops/mongo_backup_restore/"
     }
   ]
 }
@@ -110,14 +110,14 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "tonywu1995.github.io/devops/mongo_backup_restore/"
+    "@id": "https://tonywu1995.github.io/devops/mongo_backup_restore/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Tony Wu's Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "tonywu1995.github.io/favicon.ico"
+      "url": "https://tonywu1995.github.io/favicon.ico"
     }
   }
 }
@@ -139,7 +139,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="tonywu1995.github.io" accesskey="h" title="Tony Wu&#39;s Blog (Alt + H)">Tony Wu&#39;s Blog</a>
+            <a href="https://tonywu1995.github.io" accesskey="h" title="Tony Wu&#39;s Blog (Alt + H)">Tony Wu&#39;s Blog</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -165,27 +165,27 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="tonywu1995.github.io/tonywu1995.github.io/" title="Home">
+                <a href="https://tonywu1995.github.io/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="tonywu1995.github.io/tonywu1995.github.io/archives/" title="Archives">
+                <a href="https://tonywu1995.github.io/archives/" title="Archives">
                     <span>Archives</span>
                 </a>
             </li>
             <li>
-                <a href="tonywu1995.github.io/tonywu1995.github.io/categories/" title="Categories">
+                <a href="https://tonywu1995.github.io/categories/" title="Categories">
                     <span>Categories</span>
                 </a>
             </li>
             <li>
-                <a href="tonywu1995.github.io/tonywu1995.github.io/tags/" title="Tags">
+                <a href="https://tonywu1995.github.io/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="tonywu1995.github.io/tonywu1995.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://tonywu1995.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -196,7 +196,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="tonywu1995.github.io">Home</a>&nbsp;»&nbsp;<a href="tonywu1995.github.io/devops/">Devops</a></div>
+    <div class="breadcrumbs"><a href="https://tonywu1995.github.io">Home</a>&nbsp;»&nbsp;<a href="https://tonywu1995.github.io/devops/">Devops</a></div>
     <h1 class="post-title">
       Mongo備份與還原
     </h1>
@@ -247,16 +247,16 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="tonywu1995.github.io/tags/devops/">devops</a></li>
-      <li><a href="tonywu1995.github.io/tags/mongo/">mongo</a></li>
+      <li><a href="https://tonywu1995.github.io/tags/devops/">devops</a></li>
+      <li><a href="https://tonywu1995.github.io/tags/mongo/">mongo</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="tonywu1995.github.io/devops/ngork/">
+  <a class="prev" href="https://tonywu1995.github.io/devops/ngork/">
     <span class="title">« </span>
     <br>
     <span>Ngork</span>
   </a>
-  <a class="next" href="tonywu1995.github.io/devops/skdman/">
+  <a class="next" href="https://tonywu1995.github.io/devops/skdman/">
     <span class="title"> »</span>
     <br>
     <span>Sdkman</span>
@@ -268,7 +268,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="tonywu1995.github.io">Tony Wu&#39;s Blog</a></span>
+    <span>&copy; 2021 <a href="https://tonywu1995.github.io">Tony Wu&#39;s Blog</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

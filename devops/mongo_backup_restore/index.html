@@ -7,11 +7,11 @@
 <meta name="robots" content="index, follow">
 <title>Mongo備份與還原 | Tony Wu&#39;s Blog</title>
 <meta name="keywords" content="devops, mongo" />
-<meta name="description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;參考連結  Mongo  ">
+<meta name="description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt; 切換db  use admin 磁碟同步與上鎖  db.runCommand({fsync:1,lock:1}) 確認是否上鎖  db.currentOp() 備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt; 解鎖  db.fsyncUnlock() 還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt; 參考連結  Mongo  ">
 <meta name="author" content="Tony">
 <link rel="canonical" href="https://tonywu1995.github.io/devops/mongo_backup_restore/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2840b7fccd34145847db71a290569594bdbdb00047097f75d6495d162f5d7dff.js" integrity="sha256-KEC3/M00FFhH23GikFaVlL29sABHCX911kldFi9dff8="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://tonywu1995.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://tonywu1995.github.io/favicon-16x16.png">
@@ -20,7 +20,7 @@
 <link rel="mask-icon" href="https://tonywu1995.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.99.1" />
 <noscript>
     <style>
         #theme-toggle,
@@ -58,7 +58,7 @@
 
     </style>
 </noscript><meta property="og:title" content="Mongo備份與還原" />
-<meta property="og:description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;參考連結  Mongo  " />
+<meta property="og:description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt; 切換db  use admin 磁碟同步與上鎖  db.runCommand({fsync:1,lock:1}) 確認是否上鎖  db.currentOp() 備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt; 解鎖  db.fsyncUnlock() 還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt; 參考連結  Mongo  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonywu1995.github.io/devops/mongo_backup_restore/" /><meta property="article:section" content="devops" />
 <meta property="article:published_time" content="2021-09-21T16:45:55&#43;08:00" />
@@ -66,7 +66,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mongo備份與還原"/>
-<meta name="twitter:description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;參考連結  Mongo  "/>
+<meta name="twitter:description" content="介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &lt;username&gt; -p &lt;password&gt; 切換db  use admin 磁碟同步與上鎖  db.runCommand({fsync:1,lock:1}) 確認是否上鎖  db.currentOp() 備份資料  mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt; 解鎖  db.fsyncUnlock() 還原步驟  還原  mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt; 參考連結  Mongo  "/>
 
 
 <script type="application/ld+json">
@@ -95,11 +95,11 @@
   "@type": "BlogPosting",
   "headline": "Mongo備份與還原",
   "name": "Mongo備份與還原",
-  "description": "介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u \u0026lt;username\u0026gt; -p \u0026lt;password\u0026gt;\r切換db  use admin\r磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})\r確認是否上鎖  db.currentOp()\r備份資料  mongodump --host \u0026lt;host-ip\u0026gt; --port 27017 --db \u0026lt;database\u0026gt; --authenticationDatabase admin --username \u0026lt;username\u0026gt; --password \u0026lt;password\u0026gt; --out \u0026lt;Path\u0026gt;\r解鎖  db.fsyncUnlock()\r還原步驟  還原  mongorestore --host \u0026lt;host-ip\u0026gt; --port 27017 --username \u0026lt;username\u0026gt; --password \u0026lt;password\u0026gt; --db \u0026lt;database\u0026gt; \u0026lt;backup file path\u0026gt;\r參考連結  Mongo  ",
+  "description": "介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u \u0026lt;username\u0026gt; -p \u0026lt;password\u0026gt; 切換db  use admin 磁碟同步與上鎖  db.runCommand({fsync:1,lock:1}) 確認是否上鎖  db.currentOp() 備份資料  mongodump --host \u0026lt;host-ip\u0026gt; --port 27017 --db \u0026lt;database\u0026gt; --authenticationDatabase admin --username \u0026lt;username\u0026gt; --password \u0026lt;password\u0026gt; --out \u0026lt;Path\u0026gt; 解鎖  db.fsyncUnlock() 還原步驟  還原  mongorestore --host \u0026lt;host-ip\u0026gt; --port 27017 --username \u0026lt;username\u0026gt; --password \u0026lt;password\u0026gt; --db \u0026lt;database\u0026gt; \u0026lt;backup file path\u0026gt; 參考連結  Mongo  ",
   "keywords": [
     "devops", "mongo"
   ],
-  "articleBody": "介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u  -p \r切換db  use admin\r磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})\r確認是否上鎖  db.currentOp()\r備份資料  mongodump --host  --port 27017 --db  --authenticationDatabase admin --username  --password  --out \r解鎖  db.fsyncUnlock()\r還原步驟  還原  mongorestore --host  --port 27017 --username  --password  --db  參考連結  Mongo  ",
+  "articleBody": "介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u  -p  切換db  use admin 磁碟同步與上鎖  db.runCommand({fsync:1,lock:1}) 確認是否上鎖  db.currentOp() 備份資料  mongodump --host  --port 27017 --db  --authenticationDatabase admin --username  --password  --out  解鎖  db.fsyncUnlock() 還原步驟  還原  mongorestore --host  --port 27017 --username  --password  --db  參考連結  Mongo  ",
   "wordCount" : "52",
   "inLanguage": "zh-tw",
   "datePublished": "2021-09-21T16:45:55+08:00",
@@ -268,7 +268,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://tonywu1995.github.io">Tony Wu&#39;s Blog</a></span>
+    <span>&copy; 2022 <a href="https://tonywu1995.github.io">Tony Wu&#39;s Blog</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

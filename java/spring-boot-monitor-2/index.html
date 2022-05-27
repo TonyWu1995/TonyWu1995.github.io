@@ -11,7 +11,7 @@
 <meta name="author" content="Tony">
 <link rel="canonical" href="https://tonywu1995.github.io/java/spring-boot-monitor-2/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2840b7fccd34145847db71a290569594bdbdb00047097f75d6495d162f5d7dff.js" integrity="sha256-KEC3/M00FFhH23GikFaVlL29sABHCX911kldFi9dff8="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://tonywu1995.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://tonywu1995.github.io/favicon-16x16.png">
@@ -20,7 +20,7 @@
 <link rel="mask-icon" href="https://tonywu1995.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.88.1" />
+<meta name="generator" content="Hugo 0.99.1" />
 <noscript>
     <style>
         #theme-toggle,
@@ -95,11 +95,11 @@
   "@type": "BlogPosting",
   "headline": "Spring Boot監控(中)",
   "name": "Spring Boot監控(中)",
-  "description": "步驟 安裝Prometheus/Grafana  設定Prometheus設定向我們spring boot application位置  # my global config\rglobal:\rscrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.\revaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.\rscrape_configs:\r# The job name is added as a label `job=\u0026lt;job_name\u0026gt;` to any timeseries scraped from this config.\r- job_name: 'My-Spring-Boot-Application'\r# Override the global default and scrape targets from this job every 5 seconds.",
+  "description": "步驟 安裝Prometheus/Grafana  設定Prometheus設定向我們spring boot application位置  # my global config\rglobal:\rscrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.\revaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.\rscrape_configs:\r# The job name is added as a label `job=\u0026lt;job_name\u0026gt;` to any timeseries scraped from this config.\r- job_name: \u0026#39;My-Spring-Boot-Application\u0026#39;\r# Override the global default and scrape targets from this job every 5 seconds.",
   "keywords": [
     "java", "spring", "devops", "prometheus"
   ],
-  "articleBody": "步驟 安裝Prometheus/Grafana  設定Prometheus設定向我們spring boot application位置  # my global config\rglobal:\rscrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.\revaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.\rscrape_configs:\r# The job name is added as a label `job=` to any timeseries scraped from this config.\r- job_name: 'My-Spring-Boot-Application'\r# Override the global default and scrape targets from this job every 5 seconds.\rscrape_interval: 15s\rstatic_configs:\r- targets: ['192.168.1.25:9100'] # My-Spring-Boot-Application IP\r 我們使用docker-compose.yml方式來建立Prometheus/Grafana的監控環境docker-compose up -d  version: \"3.7\"\rservices:\rprometheus:\rimage: prom/prometheus:v2.30.0\rrestart: always\rcontainer_name: prometheus\rvolumes:\r# config\r- ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml\r- ./prometheus/:/etc/prometheus/\r# tsdb data\r- ./prometheus/data:/prometheus\rcommand:\r- '--config.file=/etc/prometheus/prometheus.yml'\r# backup - '--web.enable-admin-api'\r# tsdb time delete\r- '--storage.tsdb.retention.time=10d'\r# tsdb locat\r- '--storage.tsdb.path=/prometheus'\r# reload config\r- '--web.enable-lifecycle'\rports:\r- \"9090:9090\"\rgrafana:\rimage: grafana/grafana:8.1.5\rrestart: always\rcontainer_name: grafana\renvironment:\rvolumes:\r- ./grafana/logs:/var/log/grafana\r- ./grafana/plugins:/var/lib/grafana/plugins\r- ./grafana/data:/var/lib/grafana\r- ./grafana/provisioning/:/etc/grafana/provisioning/\rports:\r- \"3000:3000\"\r 即可在prometheus:9090看到spring boot的metrics資料 接者設定下一集就是設定grafana dashboard的顯示了  參考連結  Prometheus Grafana  ",
+  "articleBody": "步驟 安裝Prometheus/Grafana  設定Prometheus設定向我們spring boot application位置  # my global config\rglobal:\rscrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.\revaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.\rscrape_configs:\r# The job name is added as a label `job=` to any timeseries scraped from this config.\r- job_name: 'My-Spring-Boot-Application'\r# Override the global default and scrape targets from this job every 5 seconds.\rscrape_interval: 15s\rstatic_configs:\r- targets: ['192.168.1.25:9100'] # My-Spring-Boot-Application IP\r 我們使用docker-compose.yml方式來建立Prometheus/Grafana的監控環境docker-compose up -d  version: \"3.7\"\rservices:\rprometheus:\rimage: prom/prometheus:v2.30.0\rrestart: always\rcontainer_name: prometheus\rvolumes:\r# config\r- ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml\r- ./prometheus/:/etc/prometheus/\r# tsdb data\r- ./prometheus/data:/prometheus\rcommand:\r- '--config.file=/etc/prometheus/prometheus.yml'\r# backup - '--web.enable-admin-api'\r# tsdb time delete\r- '--storage.tsdb.retention.time=10d'\r# tsdb locat\r- '--storage.tsdb.path=/prometheus'\r# reload config\r- '--web.enable-lifecycle'\rports:\r- \"9090:9090\"\rgrafana:\rimage: grafana/grafana:8.1.5\rrestart: always\rcontainer_name: grafana\renvironment:\rvolumes:\r- ./grafana/logs:/var/log/grafana\r- ./grafana/plugins:/var/lib/grafana/plugins\r- ./grafana/data:/var/lib/grafana\r- ./grafana/provisioning/:/etc/grafana/provisioning/\rports:\r- \"3000:3000\"  即可在prometheus:9090看到spring boot的metrics資料 接者設定下一集就是設定grafana dashboard的顯示了  參考連結  Prometheus Grafana  ",
   "wordCount" : "162",
   "inLanguage": "zh-tw",
   "datePublished": "2021-10-03T16:25:57+08:00",
@@ -215,17 +215,17 @@ global:
 
 scrape_configs:
   # The job name is added as a label `job=&lt;job_name&gt;` to any timeseries scraped from this config.
-  - job_name: 'My-Spring-Boot-Application'
+  - job_name: &#39;My-Spring-Boot-Application&#39;
 
     # Override the global default and scrape targets from this job every 5 seconds.
     scrape_interval: 15s
     static_configs:
-      - targets: ['192.168.1.25:9100'] # My-Spring-Boot-Application IP
+      - targets: [&#39;192.168.1.25:9100&#39;] # My-Spring-Boot-Application IP
   
 </code></pre><ul>
 <li>我們使用docker-compose.yml方式來建立Prometheus/Grafana的監控環境<code>docker-compose up -d</code></li>
 </ul>
-<pre tabindex="0"><code>version: &quot;3.7&quot;
+<pre tabindex="0"><code>version: &#34;3.7&#34;
 
 services:
   prometheus:
@@ -239,17 +239,17 @@ services:
       # tsdb data
       - ./prometheus/data:/prometheus
     command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
+      - &#39;--config.file=/etc/prometheus/prometheus.yml&#39;
       # backup 
-      - '--web.enable-admin-api'
+      - &#39;--web.enable-admin-api&#39;
       # tsdb time delete
-      - '--storage.tsdb.retention.time=10d'
+      - &#39;--storage.tsdb.retention.time=10d&#39;
       # tsdb locat
-      - '--storage.tsdb.path=/prometheus'
+      - &#39;--storage.tsdb.path=/prometheus&#39;
       # reload config
-      - '--web.enable-lifecycle'
+      - &#39;--web.enable-lifecycle&#39;
     ports:
-      - &quot;9090:9090&quot;
+      - &#34;9090:9090&#34;
    
   grafana:
     image: grafana/grafana:8.1.5
@@ -263,8 +263,7 @@ services:
       - ./grafana/data:/var/lib/grafana
       - ./grafana/provisioning/:/etc/grafana/provisioning/
     ports:
-      - &quot;3000:3000&quot;
-
+      - &#34;3000:3000&#34;
 </code></pre><ul>
 <li>即可在prometheus:9090看到spring boot的metrics資料</li>
 <li>接者設定下一集就是設定grafana dashboard的顯示了</li>
@@ -303,7 +302,7 @@ services:
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://tonywu1995.github.io">Tony Wu&#39;s Blog</a></span>
+    <span>&copy; 2022 <a href="https://tonywu1995.github.io">Tony Wu&#39;s Blog</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

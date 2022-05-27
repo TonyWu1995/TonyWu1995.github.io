@@ -5,14 +5,25 @@
     <link>https://tonywu1995.github.io/</link>
     <description>Recent content on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Oct 2021 16:25:57 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 May 2022 22:59:35 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ssh_tunnel</title>
+      <link>https://tonywu1995.github.io/devops/ssh_tunnel/</link>
+      <pubDate>Fri, 27 May 2022 22:59:35 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/devops/ssh_tunnel/</guid>
+      <description>前言 使用到 SSH Tunnel 情境
+這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長
+主要內容 ssh -L [local]:[local_port]:[host]:[host_port] username@host  local :本地位置 local_port:本地開啟port host:遠端Server位置 host_port:遠端要轉發port  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結    </description>
+    </item>
+    
     <item>
       <title>Node_Exporter</title>
       <link>https://tonywu1995.github.io/devops/node_exporter/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
       <guid>https://tonywu1995.github.io/devops/node_exporter/</guid>
-      <description>前言  node exporter是用來監控Linux vm的一個Prometheus Client  提供: CPU 使用率、硬碟使用率&amp;hellip; metrics    步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bashversion=&amp;quot;${VERSION:-1.2.2}&amp;quot;arch=&amp;quot;${ARCH:-linux-amd64}&amp;quot;bin_dir=&amp;quot;${BIN_DIR:-/usr/local/bin}&amp;quot;wget &amp;quot;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&amp;quot; \-O /tmp/node_exporter.tar.gzmkdir -p /tmp/node_exportercd /tmp || { echo &amp;quot;ERROR! No /tmp found..&amp;quot;; exit 1; }tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &amp;quot;ERROR! Extracting the node_exporter tar&amp;quot;; exit 1; }sudo cp &amp;quot;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&amp;quot; &amp;quot;$bin_dir&amp;quot;chown root:staff &amp;quot;$bin_dir/node_exporter&amp;quot;sudo cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/systemd/system/node_exporter.service[Unit]Description=Node ExporterAfter=network.</description>
+      <description>前言  node exporter是用來監控Linux vm的一個Prometheus Client  提供: CPU 使用率、硬碟使用率&amp;hellip; metrics    步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bashversion=&amp;#34;${VERSION:-1.2.2}&amp;#34;arch=&amp;#34;${ARCH:-linux-amd64}&amp;#34;bin_dir=&amp;#34;${BIN_DIR:-/usr/local/bin}&amp;#34;wget &amp;#34;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&amp;#34; \-O /tmp/node_exporter.tar.gzmkdir -p /tmp/node_exportercd /tmp || { echo &amp;#34;ERROR! No /tmp found..&amp;#34;; exit 1; }tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &amp;#34;ERROR! Extracting the node_exporter tar&amp;#34;; exit 1; }sudo cp &amp;#34;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&amp;#34; &amp;#34;$bin_dir&amp;#34;chown root:staff &amp;#34;$bin_dir/node_exporter&amp;#34;sudo cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/systemd/system/node_exporter.service[Unit]Description=Node ExporterAfter=network.</description>
     </item>
     
     <item>
@@ -21,7 +32,7 @@
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
       <guid>https://tonywu1995.github.io/java/spring-boot-monitor-2/</guid>
-      <description>步驟 安裝Prometheus/Grafana  設定Prometheus設定向我們spring boot application位置  # my global configglobal:scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:# The job name is added as a label `job=&amp;lt;job_name&amp;gt;` to any timeseries scraped from this config.- job_name: &#39;My-Spring-Boot-Application&#39;# Override the global default and scrape targets from this job every 5 seconds.</description>
+      <description>步驟 安裝Prometheus/Grafana  設定Prometheus設定向我們spring boot application位置  # my global configglobal:scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:# The job name is added as a label `job=&amp;lt;job_name&amp;gt;` to any timeseries scraped from this config.- job_name: &amp;#39;My-Spring-Boot-Application&amp;#39;# Override the global default and scrape targets from this job every 5 seconds.</description>
     </item>
     
     <item>
@@ -30,7 +41,7 @@
       <pubDate>Wed, 22 Sep 2021 22:47:52 +0800</pubDate>
       
       <guid>https://tonywu1995.github.io/java/spring-boot-monitor-1/</guid>
-      <description>前言  常在河邊走那裡不失鞋，當一個後端工程師，常常會遇到上線Application server突然無法壞掉的問題，因此我們需要一個監控的Server來輔助我們上線的Application，本篇將使用Prometheus監控server當作範例來做為展示  步驟 Spring boot 安裝Prometheus Client  在pom.xml上新增兩個dependency  spring-boot-starter-actuator: spring boot內建的監控library micrometer-registry-prometheus: 在spring boot上提供prometheus metrics格式     &amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;io.micrometer&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;micrometer-registry-prometheus&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;Spring boot 調整設定檔  在applcation.yml 新增下列設定  management:endpoint:health:show-details: alwaysprometheus:enabled: trueendpoints:web:exposure:include: prometheus,healthmetrics:tags:application: ${spring.application.name}health:diskspace:enabled: truedefaults:enabled: false 設定好，啟動spring boot即可在http://:/actuator/prometheus看到metrics  參考連結  Spring boot Spring boot Actuator Micrometer Registry Prometheus  </description>
+      <description>前言  常在河邊走那裡不失鞋，當一個後端工程師，常常會遇到上線Application server突然無法壞掉的問題，因此我們需要一個監控的Server來輔助我們上線的Application，本篇將使用Prometheus監控server當作範例來做為展示  步驟 Spring boot 安裝Prometheus Client  在pom.xml上新增兩個dependency  spring-boot-starter-actuator: spring boot內建的監控library micrometer-registry-prometheus: 在spring boot上提供prometheus metrics格式     &amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;io.micrometer&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;micrometer-registry-prometheus&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt; Spring boot 調整設定檔  在applcation.yml 新增下列設定  management:endpoint:health:show-details: alwaysprometheus:enabled: trueendpoints:web:exposure:include: prometheus,healthmetrics:tags:application: ${spring.application.name}health:diskspace:enabled: truedefaults:enabled: false  設定好，啟動spring boot即可在http://:/actuator/prometheus看到metrics  參考連結  Spring boot Spring boot Actuator Micrometer Registry Prometheus  </description>
     </item>
     
     <item>
@@ -39,7 +50,7 @@
       <pubDate>Tue, 21 Sep 2021 17:06:57 +0800</pubDate>
       
       <guid>https://tonywu1995.github.io/devops/ngork/</guid>
-      <description>介紹  在本機上開發的時候常常遇到需要https和domain name的狀況，例如:Line Bot的webhook測試，這時候使用ngrok就可以解決這個問題，ngork賦予你一個暫時domain name和https  安裝 Windows choco install ngrokMac brew install ngrok在本機上登入ngork(使用token認證) ngrok authtoken &amp;lt;token&amp;gt;使用 ngrok http &amp;lt;Port&amp;gt;參考連結  ngork  </description>
+      <description>介紹  在本機上開發的時候常常遇到需要https和domain name的狀況，例如:Line Bot的webhook測試，這時候使用ngrok就可以解決這個問題，ngork賦予你一個暫時domain name和https  安裝 Windows choco install ngrok Mac brew install ngrok 在本機上登入ngork(使用token認證) ngrok authtoken &amp;lt;token&amp;gt; 使用 ngrok http &amp;lt;Port&amp;gt; 參考連結  ngork  </description>
     </item>
     
     <item>
@@ -48,7 +59,7 @@
       <pubDate>Tue, 21 Sep 2021 16:45:55 +0800</pubDate>
       
       <guid>https://tonywu1995.github.io/devops/mongo_backup_restore/</guid>
-      <description>介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &amp;lt;username&amp;gt; -p &amp;lt;password&amp;gt;切換db  use admin磁碟同步與上鎖  db.runCommand({fsync:1,lock:1})確認是否上鎖  db.currentOp()備份資料  mongodump --host &amp;lt;host-ip&amp;gt; --port 27017 --db &amp;lt;database&amp;gt; --authenticationDatabase admin --username &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; --out &amp;lt;Path&amp;gt;解鎖  db.fsyncUnlock()還原步驟  還原  mongorestore --host &amp;lt;host-ip&amp;gt; --port 27017 --username &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; --db &amp;lt;database&amp;gt; &amp;lt;backup file path&amp;gt;參考連結  Mongo  </description>
+      <description>介紹  在工作上不免要定期備份database的資料與還原datdabase的資料  備份步驟  連線進入mongo  mongo -u &amp;lt;username&amp;gt; -p &amp;lt;password&amp;gt; 切換db  use admin 磁碟同步與上鎖  db.runCommand({fsync:1,lock:1}) 確認是否上鎖  db.currentOp() 備份資料  mongodump --host &amp;lt;host-ip&amp;gt; --port 27017 --db &amp;lt;database&amp;gt; --authenticationDatabase admin --username &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; --out &amp;lt;Path&amp;gt; 解鎖  db.fsyncUnlock() 還原步驟  還原  mongorestore --host &amp;lt;host-ip&amp;gt; --port 27017 --username &amp;lt;username&amp;gt; --password &amp;lt;password&amp;gt; --db &amp;lt;database&amp;gt; &amp;lt;backup file path&amp;gt; 參考連結  Mongo  </description>
     </item>
     
     <item>
@@ -57,7 +68,7 @@
       <pubDate>Tue, 21 Sep 2021 15:46:52 +0800</pubDate>
       
       <guid>https://tonywu1995.github.io/devops/skdman/</guid>
-      <description>介紹  SDKMAN是一款基於Linux/Mac的SDK管理工具，可以管理多個版本JDK，也可以安裝與JDK相容的套件  安裝SDKMAN $ curl -s &amp;quot;https://get.sdkman.io&amp;quot; | bash$ source &amp;quot;$HOME/.sdkman/bin/sdkman-init.sh&amp;quot;sdk version&amp;gt; sdkman 5.0.0+51 羅列Java版本 sdk list java安裝JAVA sdk install java x.y.z-open移除 sdk uninstall java ...指定預設JAVA sdk default java 11 參考連結  SDKMAN  </description>
+      <description>介紹  SDKMAN是一款基於Linux/Mac的SDK管理工具，可以管理多個版本JDK，也可以安裝與JDK相容的套件  安裝SDKMAN $ curl -s &amp;#34;https://get.sdkman.io&amp;#34; | bash$ source &amp;#34;$HOME/.sdkman/bin/sdkman-init.sh&amp;#34;sdk version&amp;gt; sdkman 5.0.0+51 羅列Java版本 sdk list java 安裝JAVA sdk install java x.y.z-open 移除 sdk uninstall java ... 指定預設JAVA sdk default java 11 參考連結  SDKMAN  </description>
     </item>
     
     

@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 27 May 2022 22:59:35 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Ssh_tunnel</title>
+      <title>SSH_Tunnel</title>
       <link>https://tonywu1995.github.io/devops/ssh_tunnel/</link>
       <pubDate>Fri, 27 May 2022 22:59:35 +0800</pubDate>
       
       <guid>https://tonywu1995.github.io/devops/ssh_tunnel/</guid>
       <description>前言 使用到 SSH Tunnel 情境
 這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長
-主要內容 ssh -L [local]:[local_port]:[host]:[host_port] username@host  local :本地位置 local_port:本地開啟port host:遠端Server位置 host_port:遠端要轉發port  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結    </description>
+主要內容 ssh -L [local_ip]:[local_port]:[host_ip]:[host_port] username@host  local_ip :本地ip位置，預設綁定本機 local_port:本地開啟port host_ip:遠端Server ip host_port:遠端要轉發port L: 建立Tunnel  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結  SSH Tunnel 突破防火牆限制  </description>
     </item>
     
     <item>

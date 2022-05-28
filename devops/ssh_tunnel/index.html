@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Ssh_tunnel | Tony Wu&#39;s Blog</title>
+<title>SSH_Tunnel | Tony Wu&#39;s Blog</title>
 <meta name="keywords" content="devops" />
 <meta name="description" content="前言 使用到 SSH Tunnel 情境
 這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長
-主要內容 ssh -L [local]:[local_port]:[host]:[host_port] username@host  local :本地位置 local_port:本地開啟port host:遠端Server位置 host_port:遠端要轉發port  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結    ">
+主要內容 ssh -L [local_ip]:[local_port]:[host_ip]:[host_port] username@host  local_ip :本地ip位置，預設綁定本機 local_port:本地開啟port host_ip:遠端Server ip host_port:遠端要轉發port L: 建立Tunnel  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結  SSH Tunnel 突破防火牆限制  ">
 <meta name="author" content="Tony">
 <link rel="canonical" href="https://tonywu1995.github.io/devops/ssh_tunnel/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
@@ -59,20 +59,20 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Ssh_tunnel" />
+</noscript><meta property="og:title" content="SSH_Tunnel" />
 <meta property="og:description" content="前言 使用到 SSH Tunnel 情境
 這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長
-主要內容 ssh -L [local]:[local_port]:[host]:[host_port] username@host  local :本地位置 local_port:本地開啟port host:遠端Server位置 host_port:遠端要轉發port  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結    " />
+主要內容 ssh -L [local_ip]:[local_port]:[host_ip]:[host_port] username@host  local_ip :本地ip位置，預設綁定本機 local_port:本地開啟port host_ip:遠端Server ip host_port:遠端要轉發port L: 建立Tunnel  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結  SSH Tunnel 突破防火牆限制  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonywu1995.github.io/devops/ssh_tunnel/" /><meta property="article:section" content="devops" />
 <meta property="article:published_time" content="2022-05-27T22:59:35&#43;08:00" />
 <meta property="article:modified_time" content="2022-05-27T22:59:35&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Ssh_tunnel"/>
+<meta name="twitter:title" content="SSH_Tunnel"/>
 <meta name="twitter:description" content="前言 使用到 SSH Tunnel 情境
 這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長
-主要內容 ssh -L [local]:[local_port]:[host]:[host_port] username@host  local :本地位置 local_port:本地開啟port host:遠端Server位置 host_port:遠端要轉發port  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結    "/>
+主要內容 ssh -L [local_ip]:[local_port]:[host_ip]:[host_port] username@host  local_ip :本地ip位置，預設綁定本機 local_port:本地開啟port host_ip:遠端Server ip host_port:遠端要轉發port L: 建立Tunnel  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結  SSH Tunnel 突破防火牆限制  "/>
 
 
 <script type="application/ld+json">
@@ -89,7 +89,7 @@
     {
       "@type": "ListItem",
       "position":  3 ,
-      "name": "Ssh_tunnel",
+      "name": "SSH_Tunnel",
       "item": "https://tonywu1995.github.io/devops/ssh_tunnel/"
     }
   ]
@@ -99,14 +99,14 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Ssh_tunnel",
-  "name": "Ssh_tunnel",
-  "description": "前言 使用到 SSH Tunnel 情境\n這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長\n主要內容 ssh -L [local]:[local_port]:[host]:[host_port] username@host  local :本地位置 local_port:本地開啟port host:遠端Server位置 host_port:遠端要轉發port  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結    ",
+  "headline": "SSH_Tunnel",
+  "name": "SSH_Tunnel",
+  "description": "前言 使用到 SSH Tunnel 情境\n這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長\n主要內容 ssh -L [local_ip]:[local_port]:[host_ip]:[host_port] username@host  local_ip :本地ip位置，預設綁定本機 local_port:本地開啟port host_ip:遠端Server ip host_port:遠端要轉發port L: 建立Tunnel  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結  SSH Tunnel 突破防火牆限制  ",
   "keywords": [
     "devops"
   ],
-  "articleBody": "前言 使用到 SSH Tunnel 情境\n這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長\n主要內容 ssh -L [local]:[local_port]:[host]:[host_port] username@host  local :本地位置 local_port:本地開啟port host:遠端Server位置 host_port:遠端要轉發port  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結    ",
-  "wordCount" : "23",
+  "articleBody": "前言 使用到 SSH Tunnel 情境\n這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長\n主要內容 ssh -L [local_ip]:[local_port]:[host_ip]:[host_port] username@host  local_ip :本地ip位置，預設綁定本機 local_port:本地開啟port host_ip:遠端Server ip host_port:遠端要轉發port L: 建立Tunnel  Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結  SSH Tunnel 突破防火牆限制  ",
+  "wordCount" : "29",
   "inLanguage": "zh-tw",
   "datePublished": "2022-05-27T22:59:35+08:00",
   "dateModified": "2022-05-27T22:59:35+08:00",
@@ -204,7 +204,7 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://tonywu1995.github.io">Home</a>&nbsp;»&nbsp;<a href="https://tonywu1995.github.io/devops/">Devops</a></div>
     <h1 class="post-title">
-      Ssh_tunnel
+      SSH_Tunnel
     </h1>
     <div class="post-meta">2022-05-27 May Friday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony
 </div>
@@ -214,18 +214,19 @@
 <p>這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432
 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長</p>
 <h1 id="主要內容">主要內容<a hidden class="anchor" aria-hidden="true" href="#主要內容">#</a></h1>
-<pre tabindex="0"><code>ssh -L [local]:[local_port]:[host]:[host_port] username@host
+<pre tabindex="0"><code>ssh -L [local_ip]:[local_port]:[host_ip]:[host_port] username@host
 </code></pre><ul>
-<li>local :本地位置</li>
+<li>local_ip :本地ip位置，預設綁定本機</li>
 <li>local_port:本地開啟port</li>
-<li>host:遠端Server位置</li>
+<li>host_ip:遠端Server ip</li>
 <li>host_port:遠端要轉發port</li>
+<li>L: 建立Tunnel</li>
 </ul>
 <h2 id="example">Example<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h2>
 <pre tabindex="0"><code>ssh -L 5432:localhost:5432  tony@123.456.789.10
 </code></pre><h1 id="參考連結">參考連結<a hidden class="anchor" aria-hidden="true" href="#參考連結">#</a></h1>
 <ul>
-<li><a href=""></a></li>
+<li><a href="https://blog.tienyulin.com/linux-ssh-tunnel/">SSH Tunnel 突破防火牆限制</a></li>
 </ul>
 
 

@@ -5,7 +5,18 @@
     <link>https://tonywu1995.github.io/java/</link>
     <description>Recent content in Javae on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Oct 2021 16:25:57 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 May 2022 12:33:47 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aop(上)</title>
+      <link>https://tonywu1995.github.io/java/aop-1/</link>
+      <pubDate>Sat, 28 May 2022 12:33:47 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/java/aop-1/</guid>
+      <description>前言 AOP 全名為:Aspect-Oriented Programming，在Java中如何實現呢?
+ 透過Design Pattern 中的Proxy Pattern來實現 透過AspectJ or Spring Aop來實現  本章節主要講Proxy Pattern的實現方式
+主要內容  我們有個需求是，需要提升查詢的效能，所以我們的做法是增加Cache  Version 1  第一個版本，我們先建立的代碼 建立一個service 和一個repo，從repo 拿取相對應的user  public class FindUserService { private final UserRepo userRepo; public FindUserService(final UserRepo userRepo) { this.userRepo = userRepo; } public User find(String username) { return userRepo.findByUsername(username); } } @AllArgsConstructor @NoArgsConstructor @Data @Builder public class User { String username; String password; }  public interface UserRepo { User findByUsername(String username); } public class UserAdapter implements UserRepo { private final Map&amp;lt;String, User&amp;gt; userMap; private final ReentrantReadWriteLock lock; public UserAdapter(final Map&amp;lt;String, User&amp;gt; userMap) { this.</description>
+    </item>
+    
     <item>
       <title>Spring Boot監控(中)</title>
       <link>https://tonywu1995.github.io/java/spring-boot-monitor-2/</link>

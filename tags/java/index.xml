@@ -13,8 +13,8 @@
       
       <guid>https://tonywu1995.github.io/java/aop-1/</guid>
       <description>前言 AOP 全名為:Aspect-Oriented Programming，在Java中如何實現呢?
- 透過Design Pattern 中的Proxy Pattern來實現 透過AspectJ or Spring Aop來實現  本章節主要講Proxy Pattern的實現方式
-主要內容  我們有個需求是，需要提升查詢的效能，所以我們的做法是增加Cache  Version 1  第一個版本，我們先建立的代碼 建立一個service 和一個repo，從repo 拿取相對應的user  public class FindUserService { private final UserRepo userRepo; public FindUserService(final UserRepo userRepo) { this.userRepo = userRepo; } public User find(String username) { return userRepo.findByUsername(username); } } @AllArgsConstructor @NoArgsConstructor @Data @Builder public class User { String username; String password; }  public interface UserRepo { User findByUsername(String username); } public class UserAdapter implements UserRepo { private final Map&amp;lt;String, User&amp;gt; userMap; private final ReentrantReadWriteLock lock; public UserAdapter(final Map&amp;lt;String, User&amp;gt; userMap) { this.</description>
+透過Design Pattern 中的Proxy Pattern來實現 透過AspectJ or Spring Aop來實現 本章節主要講Proxy Pattern的實現方式
+主要內容 我們有個需求是，需要提升查詢的效能，所以我們的做法是增加Cache Version 1 第一個版本，我們先建立的代碼 建立一個service 和一個repo，從repo 拿取相對應的user public class FindUserService { private final UserRepo userRepo; public FindUserService(final UserRepo userRepo) { this.userRepo = userRepo; } public User find(String username) { return userRepo.findByUsername(username); } } @AllArgsConstructor @NoArgsConstructor @Data @Builder public class User { String username; String password; } public interface UserRepo { User findByUsername(String username); } public class UserAdapter implements UserRepo { private final Map&amp;lt;String, User&amp;gt; userMap; private final ReentrantReadWriteLock lock; public UserAdapter(final Map&amp;lt;String, User&amp;gt; userMap) { this.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       
       <guid>https://tonywu1995.github.io/java/spring-boot-monitor-2/</guid>
-      <description>步驟 安裝Prometheus/Grafana  設定Prometheus設定向我們spring boot application位置  # my global configglobal:scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:# The job name is added as a label `job=&amp;lt;job_name&amp;gt;` to any timeseries scraped from this config.- job_name: &amp;#39;My-Spring-Boot-Application&amp;#39;# Override the global default and scrape targets from this job every 5 seconds.</description>
+      <description>步驟 安裝Prometheus/Grafana 設定Prometheus設定向我們spring boot application位置 # my global configglobal:scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:# The job name is added as a label `job=&amp;lt;job_name&amp;gt;` to any timeseries scraped from this config.- job_name: &amp;#39;My-Spring-Boot-Application&amp;#39;# Override the global default and scrape targets from this job every 5 seconds.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Wed, 22 Sep 2021 22:47:52 +0800</pubDate>
       
       <guid>https://tonywu1995.github.io/java/spring-boot-monitor-1/</guid>
-      <description>前言  常在河邊走那裡不失鞋，當一個後端工程師，常常會遇到上線Application server突然無法壞掉的問題，因此我們需要一個監控的Server來輔助我們上線的Application，本篇將使用Prometheus監控server當作範例來做為展示  步驟 Spring boot 安裝Prometheus Client  在pom.xml上新增兩個dependency  spring-boot-starter-actuator: spring boot內建的監控library micrometer-registry-prometheus: 在spring boot上提供prometheus metrics格式     &amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;io.micrometer&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;micrometer-registry-prometheus&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt; Spring boot 調整設定檔  在applcation.yml 新增下列設定  management:endpoint:health:show-details: alwaysprometheus:enabled: trueendpoints:web:exposure:include: prometheus,healthmetrics:tags:application: ${spring.application.name}health:diskspace:enabled: truedefaults:enabled: false  設定好，啟動spring boot即可在http://:/actuator/prometheus看到metrics  參考連結  Spring boot Spring boot Actuator Micrometer Registry Prometheus  </description>
+      <description>前言 常在河邊走那裡不失鞋，當一個後端工程師，常常會遇到上線Application server突然無法壞掉的問題，因此我們需要一個監控的Server來輔助我們上線的Application，本篇將使用Prometheus監控server當作範例來做為展示 步驟 Spring boot 安裝Prometheus Client 在pom.xml上新增兩個dependency spring-boot-starter-actuator: spring boot內建的監控library micrometer-registry-prometheus: 在spring boot上提供prometheus metrics格式 &amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;spring-boot-starter-actuator&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;io.micrometer&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;micrometer-registry-prometheus&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt; Spring boot 調整設定檔 在applcation.yml 新增下列設定 management:endpoint:health:show-details: alwaysprometheus:enabled: trueendpoints:web:exposure:include: prometheus,healthmetrics:tags:application: ${spring.application.name}health:diskspace:enabled: truedefaults:enabled: false 設定好，啟動spring boot即可在http://:/actuator/prometheus看到metrics 參考連結 Spring boot Spring boot Actuator Micrometer Registry Prometheus </description>
     </item>
     
   </channel>

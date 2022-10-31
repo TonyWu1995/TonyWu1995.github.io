@@ -10,7 +10,7 @@
 <meta name="description" content="工作上收集整理使用的工具與筆記">
 <meta name="author" content="Tony">
 <link rel="canonical" href="https://tonywu1995.github.io/tags/java/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://tonywu1995.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://tonywu1995.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://tonywu1995.github.io/favicon-32x32.png">
@@ -161,7 +161,7 @@ if (!doNotTrack) {
 透過Design Pattern 中的Proxy Pattern來實現 透過AspectJ or Spring Aop來實現 本章節主要講Proxy Pattern的實現方式
 主要內容 我們有個需求是，需要提升查詢的效能，所以我們的做法是增加Cache Version 1 第一個版本，我們先建立的代碼 建立一個service 和一個repo，從repo 拿取相對應的user public class FindUserService { private final UserRepo userRepo; public FindUserService(final UserRepo userRepo) { this.userRepo = userRepo; } public User find(String username) { return userRepo.findByUsername(username); } } @AllArgsConstructor @NoArgsConstructor @Data @Builder public class User { String username; String password; } public interface UserRepo { User findByUsername(String username); } public class UserAdapter implements UserRepo { private final Map&lt;String, User&gt; userMap; private final ReentrantReadWriteLock lock; public UserAdapter(final Map&lt;String, User&gt; userMap) { this....</p>
   </section>
-  <footer class="entry-footer">2022-05-28 May Saturday&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Tony</footer>
+  <footer class="entry-footer"><span title='2022-05-28 12:33:47 +0800 +0800'>2022-05-28 May Saturday</span>&nbsp;·&nbsp;2 分鐘&nbsp;·&nbsp;Tony</footer>
   <a class="entry-link" aria-label="post link to Aop(上)" href="https://tonywu1995.github.io/java/aop-1/"></a>
 </article>
 
@@ -173,7 +173,7 @@ if (!doNotTrack) {
   <section class="entry-content">
     <p>步驟 安裝Prometheus/Grafana 設定Prometheus設定向我們spring boot application位置 # my global configglobal:scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:# The job name is added as a label `job=&lt;job_name&gt;` to any timeseries scraped from this config.- job_name: &#39;My-Spring-Boot-Application&#39;# Override the global default and scrape targets from this job every 5 seconds....</p>
   </section>
-  <footer class="entry-footer">2021-10-03 October Sunday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony</footer>
+  <footer class="entry-footer"><span title='2021-10-03 16:25:57 +0800 +0800'>2021-10-03 October Sunday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
   <a class="entry-link" aria-label="post link to Spring Boot監控(中)" href="https://tonywu1995.github.io/java/spring-boot-monitor-2/"></a>
 </article>
 
@@ -185,7 +185,7 @@ if (!doNotTrack) {
   <section class="entry-content">
     <p>前言 常在河邊走那裡不失鞋，當一個後端工程師，常常會遇到上線Application server突然無法壞掉的問題，因此我們需要一個監控的Server來輔助我們上線的Application，本篇將使用Prometheus監控server當作範例來做為展示 步驟 Spring boot 安裝Prometheus Client 在pom.xml上新增兩個dependency spring-boot-starter-actuator: spring boot內建的監控library micrometer-registry-prometheus: 在spring boot上提供prometheus metrics格式 &lt;dependency&gt;&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;&lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;&lt;/dependency&gt;&lt;dependency&gt;&lt;groupId&gt;io.micrometer&lt;/groupId&gt;&lt;artifactId&gt;micrometer-registry-prometheus&lt;/artifactId&gt;&lt;/dependency&gt; Spring boot 調整設定檔 在applcation.yml 新增下列設定 management:endpoint:health:show-details: alwaysprometheus:enabled: trueendpoints:web:exposure:include: prometheus,healthmetrics:tags:application: ${spring.application.name}health:diskspace:enabled: truedefaults:enabled: false 設定好，啟動spring boot即可在http://:/actuator/prometheus看到metrics 參考連結 Spring boot Spring boot Actuator Micrometer Registry Prometheus </p>
   </section>
-  <footer class="entry-footer">2021-09-22 September Wednesday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony</footer>
+  <footer class="entry-footer"><span title='2021-09-22 22:47:52 +0800 +0800'>2021-09-22 September Wednesday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
   <a class="entry-link" aria-label="post link to Spring Boot監控(上)" href="https://tonywu1995.github.io/java/spring-boot-monitor-1/"></a>
 </article>
     </main>
@@ -201,9 +201,11 @@ if (!doNotTrack) {
 
 <script>
     let menu = document.getElementById('menu')
-    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-    menu.onscroll = function () {
-        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

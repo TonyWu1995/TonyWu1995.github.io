@@ -57,7 +57,18 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Spring Boot監控(中)" />
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB56NB3G32"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="Spring Boot監控(中)" />
 <meta property="og:description" content="步驟 安裝Prometheus/Grafana 設定Prometheus設定向我們spring boot application位置 # my global configglobal:scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:# The job name is added as a label `job=&lt;job_name&gt;` to any timeseries scraped from this config.- job_name: &#39;My-Spring-Boot-Application&#39;# Override the global default and scrape targets from this job every 5 seconds." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonywu1995.github.io/java/spring-boot-monitor-2/" /><meta property="article:section" content="java" />

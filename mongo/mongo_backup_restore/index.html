@@ -57,7 +57,18 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Mongo備份與還原" />
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB56NB3G32"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="Mongo備份與還原" />
 <meta property="og:description" content="介紹 在工作上不免要定期備份database的資料與還原datdabase的資料 備份步驟 連線進入mongo mongo -u &lt;username&gt; -p &lt;password&gt; 切換db use admin 磁碟同步與上鎖 db.runCommand({fsync:1,lock:1}) 確認是否上鎖 db.currentOp() 備份資料 mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt; 解鎖 db.fsyncUnlock() 還原步驟 還原 mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt; 參考連結 Mongo " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonywu1995.github.io/mongo/mongo_backup_restore/" /><meta property="article:section" content="mongo" />

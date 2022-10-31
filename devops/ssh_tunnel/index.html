@@ -59,7 +59,18 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="SSH_Tunnel" />
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB56NB3G32"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="SSH_Tunnel" />
 <meta property="og:description" content="前言 使用到 SSH Tunnel 情境
 這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長
 主要內容 ssh -L [local_ip]:[local_port]:[host_ip]:[host_port] username@host local_ip :本地ip位置，預設綁定本機 local_port:本地開啟port host_ip:遠端Server ip host_port:遠端要轉發port L: 建立Tunnel Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結 SSH Tunnel 突破防火牆限制 " />

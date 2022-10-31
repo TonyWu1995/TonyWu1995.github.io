@@ -57,7 +57,18 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Ngork" />
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB56NB3G32"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="Ngork" />
 <meta property="og:description" content="介紹 在本機上開發的時候常常遇到需要https和domain name的狀況，例如:Line Bot的webhook測試，這時候使用ngrok就可以解決這個問題，ngork賦予你一個暫時domain name和https 安裝 Windows choco install ngrok Mac brew install ngrok 在本機上登入ngork(使用token認證) ngrok authtoken &lt;token&gt; 使用 ngrok http &lt;Port&gt; 參考連結 ngork " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonywu1995.github.io/devops/ngork/" /><meta property="article:section" content="devops" />

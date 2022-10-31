@@ -57,7 +57,18 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Node Exporter安裝" />
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB56NB3G32"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="Node Exporter安裝" />
 <meta property="og:description" content="前言 node exporter是用來監控Linux vm的一個Prometheus Client 提供: CPU 使用率、硬碟使用率&hellip; metrics 步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bash version=&#34;${VERSION:-1.2.2}&#34; arch=&#34;${ARCH:-linux-amd64}&#34; bin_dir=&#34;${BIN_DIR:-/usr/local/bin}&#34; wget &#34;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&#34; \ -O /tmp/node_exporter.tar.gz mkdir -p /tmp/node_exporter cd /tmp || { echo &#34;ERROR! No /tmp found..&#34;; exit 1; } tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &#34;ERROR! Extracting the node_exporter tar&#34;; exit 1; } sudo cp &#34;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&#34; &#34;$bin_dir&#34; chown root:staff &#34;$bin_dir/node_exporter&#34; sudo cat &lt;&lt;EOF &gt; /etc/systemd/system/node_exporter.service [Unit] Description=Node Exporter After=network.target [Service] Type=simple ExecStart=/usr/local/bin/node_exporter [Install] WantedBy=multi-user." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonywu1995.github.io/prometheus/node-exporter/" /><meta property="article:section" content="prometheus" />

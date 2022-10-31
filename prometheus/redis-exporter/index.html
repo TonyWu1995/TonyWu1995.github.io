@@ -59,7 +59,18 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Redis Exporter安裝" />
+</noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB56NB3G32"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="Redis Exporter安裝" />
 <meta property="og:description" content="前言 redis exporter是用來監控Redis一個Prometheus Client，提供相關redis的監控metrics 步驟 建立一個新的folder，命名redis 在redis目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 redis-exporter: restart: always image: oliver006/redis_exporter:v1.45.0-alpine container_name: redis-exporter ports: - 9121:9121 command: - &#39;--redis.addr=redis://redis-server:6379&#39; 執行docker-compose up -d，redis服務與redis exporter即可啟動
 確認redis exporter服務，已經在執行輸入curl http://localhost:9121/metrics
 λ curl http://localhost:9121/metrics # HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles. # TYPE go_gc_duration_seconds summary go_gc_duration_seconds{quantile=&#34;0&#34;} 0 go_gc_duration_seconds{quantile=&#34;0.25&#34;} 0 go_gc_duration_seconds{quantile=&#34;0.5&#34;} 0 go_gc_duration_seconds{quantile=&#34;0.75&#34;} 0 go_gc_duration_seconds{quantile=&#34;1&#34;} 0 go_gc_duration_seconds_sum 0 go_gc_duration_seconds_count 0 # HELP go_goroutines Number of goroutines that currently exist." />

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>docker on Tony Wu&#39;s Blog</title>
+    <link>https://tonywu1995.github.io/categories/docker/</link>
+    <description>Recent content in docker on Tony Wu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 31 Oct 2022 21:22:46 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis Exporter安裝</title>
+      <link>https://tonywu1995.github.io/prometheus/redis-exporter/</link>
+      <pubDate>Mon, 31 Oct 2022 21:22:46 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/prometheus/redis-exporter/</guid>
+      <description>前言 redis exporter是用來監控Redis一個Prometheus Client，提供相關redis的監控metrics 步驟 建立一個新的folder，命名redis 在redis目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &amp;#39;3&amp;#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 redis-exporter: restart: always image: oliver006/redis_exporter:v1.45.0-alpine container_name: redis-exporter ports: - 9121:9121 command: - &amp;#39;--redis.addr=redis://redis-server:6379&amp;#39; 執行docker-compose up -d，redis服務與redis exporter即可啟動
+確認redis exporter服務，已經在執行輸入curl http://localhost:9121/metrics
+λ curl http://localhost:9121/metrics # HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles. # TYPE go_gc_duration_seconds summary go_gc_duration_seconds{quantile=&amp;#34;0&amp;#34;} 0 go_gc_duration_seconds{quantile=&amp;#34;0.25&amp;#34;} 0 go_gc_duration_seconds{quantile=&amp;#34;0.5&amp;#34;} 0 go_gc_duration_seconds{quantile=&amp;#34;0.75&amp;#34;} 0 go_gc_duration_seconds{quantile=&amp;#34;1&amp;#34;} 0 go_gc_duration_seconds_sum 0 go_gc_duration_seconds_count 0 # HELP go_goroutines Number of goroutines that currently exist.</description>
+    </item>
+    
+    <item>
+      <title>Redis安裝</title>
+      <link>https://tonywu1995.github.io/redis/redis/</link>
+      <pubDate>Sun, 30 Oct 2022 19:37:19 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/redis/redis/</guid>
+      <description>介紹 Redis 是一個開源的in memory key value cache,常用來降低服務內的延遲情況
+Redis 支援的data type
+Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfields 現在讓我們開始安裝Redis
+安裝 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &amp;#39;3&amp;#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動
+確認redis服務，已經在執行
+λ docker exec -it redis sh /data # redis-cli 127.0.0.1:6379&amp;gt; ping PONG 127.0.0.1:6379&amp;gt; exit /data # redis-cli ping PONG /data # 小結 redis 已經安裝完成，下一章節將會開始使用java連接redis 參考連結 Redis </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,46 +3,66 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tonywu1995.github.io/categories/</loc>
-    <lastmod>2022-10-30T19:37:19+08:00</lastmod>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://tonywu1995.github.io/tags/devops/</loc>
-    <lastmod>2022-10-30T19:37:19+08:00</lastmod>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://tonywu1995.github.io/categories/devops/</loc>
-    <lastmod>2022-10-30T19:37:19+08:00</lastmod>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/devops/</loc>
-    <lastmod>2022-10-30T19:37:19+08:00</lastmod>
+    <loc>https://tonywu1995.github.io/tags/docker/</loc>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://tonywu1995.github.io/categories/docker/</loc>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://tonywu1995.github.io/prometheus/</loc>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://tonywu1995.github.io/tags/redis/</loc>
-    <lastmod>2022-10-30T19:37:19+08:00</lastmod>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://tonywu1995.github.io/categories/redis/</loc>
-    <lastmod>2022-10-30T19:37:19+08:00</lastmod>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/devops/redis/</loc>
-    <lastmod>2022-10-30T19:37:19+08:00</lastmod>
+    <loc>https://tonywu1995.github.io/prometheus/redis-exporter/</loc>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://tonywu1995.github.io/tags/</loc>
-    <lastmod>2022-10-30T19:37:19+08:00</lastmod>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://tonywu1995.github.io/</loc>
+    <lastmod>2022-10-31T21:22:46+08:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://tonywu1995.github.io/redis/</loc>
+    <lastmod>2022-10-30T19:37:19+08:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://tonywu1995.github.io/redis/redis/</loc>
     <lastmod>2022-10-30T19:37:19+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
@@ -72,12 +92,17 @@
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://tonywu1995.github.io/devops/</loc>
+    <lastmod>2022-05-27T22:59:35+08:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://tonywu1995.github.io/devops/ssh_tunnel/</loc>
     <lastmod>2022-05-27T22:59:35+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/devops/node_exporter/</loc>
+    <loc>https://tonywu1995.github.io/prometheus/node-exporter/</loc>
     <lastmod>2021-10-03T16:25:57+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
@@ -127,7 +152,12 @@
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://tonywu1995.github.io/devops/mongo_backup_restore/</loc>
+    <loc>https://tonywu1995.github.io/mongo/</loc>
+    <lastmod>2021-09-21T16:45:55+08:00</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://tonywu1995.github.io/mongo/mongo_backup_restore/</loc>
     <lastmod>2021-09-21T16:45:55+08:00</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.5</priority>

@@ -142,7 +142,21 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Redis(一)
+    <h2>Redis Exporter安裝
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>前言 redis exporter是用來監控Redis一個Prometheus Client，提供相關redis的監控metrics 步驟 建立一個新的folder，命名redis 在redis目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 redis-exporter: restart: always image: oliver006/redis_exporter:v1.45.0-alpine container_name: redis-exporter ports: - 9121:9121 command: - &#39;--redis.addr=redis://redis-server:6379&#39; 執行docker-compose up -d，redis服務與redis exporter即可啟動
+確認redis exporter服務，已經在執行輸入curl http://localhost:9121/metrics
+λ curl http://localhost:9121/metrics # HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles. # TYPE go_gc_duration_seconds summary go_gc_duration_seconds{quantile=&#34;0&#34;} 0 go_gc_duration_seconds{quantile=&#34;0.25&#34;} 0 go_gc_duration_seconds{quantile=&#34;0.5&#34;} 0 go_gc_duration_seconds{quantile=&#34;0.75&#34;} 0 go_gc_duration_seconds{quantile=&#34;1&#34;} 0 go_gc_duration_seconds_sum 0 go_gc_duration_seconds_count 0 # HELP go_goroutines Number of goroutines that currently exist....</p>
+  </section>
+  <footer class="entry-footer">2022-10-31 October Monday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony</footer>
+  <a class="entry-link" aria-label="post link to Redis Exporter安裝" href="https://tonywu1995.github.io/prometheus/redis-exporter/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Redis安裝
     </h2>
   </header>
   <section class="entry-content">
@@ -154,7 +168,7 @@ Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfi
 λ docker exec -it redis sh /data # redis-cli 127.0.0.1:6379&gt; ping PONG 127.0.0.1:6379&gt; exit /data # redis-cli ping PONG /data # 小結 redis 已經安裝完成，下一章節將會開始使用java連接redis 參考連結 Redis </p>
   </section>
   <footer class="entry-footer">2022-10-30 October Sunday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony</footer>
-  <a class="entry-link" aria-label="post link to Redis(一)" href="https://tonywu1995.github.io/devops/redis/"></a>
+  <a class="entry-link" aria-label="post link to Redis安裝" href="https://tonywu1995.github.io/redis/redis/"></a>
 </article>
     </main>
     

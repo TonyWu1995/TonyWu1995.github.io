@@ -5,16 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Redis(一) | Tony Wu&#39;s Blog</title>
-<meta name="keywords" content="devops, redis" />
-<meta name="description" content="介紹 Redis 是一個開源的in memory key value cache,常用來降低服務內的延遲情況
-Redis 支援的data type
-Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfields 現在讓我們開始安裝Redis
-安裝 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動
-確認redis服務，已經在執行
-λ docker exec -it redis sh /data # redis-cli 127.0.0.1:6379&gt; ping PONG 127.0.0.1:6379&gt; exit /data # redis-cli ping PONG /data # 小結 redis 已經安裝完成，下一章節將會開始使用java連接redis 參考連結 Redis ">
+<title>Mongo備份與還原 | Tony Wu&#39;s Blog</title>
+<meta name="keywords" content="devops, mongo" />
+<meta name="description" content="介紹 在工作上不免要定期備份database的資料與還原datdabase的資料 備份步驟 連線進入mongo mongo -u &lt;username&gt; -p &lt;password&gt; 切換db use admin 磁碟同步與上鎖 db.runCommand({fsync:1,lock:1}) 確認是否上鎖 db.currentOp() 備份資料 mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt; 解鎖 db.fsyncUnlock() 還原步驟 還原 mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt; 參考連結 Mongo ">
 <meta name="author" content="Tony">
-<link rel="canonical" href="https://tonywu1995.github.io/devops/redis/" />
+<link rel="canonical" href="https://tonywu1995.github.io/mongo/mongo_backup_restore/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.5e2b4101351c21e906f398ae96901791830f58d430f96f2659dab7eaef7b3cb7.css" integrity="sha256-XitBATUcIekG85iulpAXkYMPWNQw&#43;W8mWdq36u97PLc=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -62,26 +57,16 @@ Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfi
         }
 
     </style>
-</noscript><meta property="og:title" content="Redis(一)" />
-<meta property="og:description" content="介紹 Redis 是一個開源的in memory key value cache,常用來降低服務內的延遲情況
-Redis 支援的data type
-Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfields 現在讓我們開始安裝Redis
-安裝 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動
-確認redis服務，已經在執行
-λ docker exec -it redis sh /data # redis-cli 127.0.0.1:6379&gt; ping PONG 127.0.0.1:6379&gt; exit /data # redis-cli ping PONG /data # 小結 redis 已經安裝完成，下一章節將會開始使用java連接redis 參考連結 Redis " />
+</noscript><meta property="og:title" content="Mongo備份與還原" />
+<meta property="og:description" content="介紹 在工作上不免要定期備份database的資料與還原datdabase的資料 備份步驟 連線進入mongo mongo -u &lt;username&gt; -p &lt;password&gt; 切換db use admin 磁碟同步與上鎖 db.runCommand({fsync:1,lock:1}) 確認是否上鎖 db.currentOp() 備份資料 mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt; 解鎖 db.fsyncUnlock() 還原步驟 還原 mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt; 參考連結 Mongo " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tonywu1995.github.io/devops/redis/" /><meta property="article:section" content="devops" />
-<meta property="article:published_time" content="2022-10-30T19:37:19&#43;08:00" />
-<meta property="article:modified_time" content="2022-10-30T19:37:19&#43;08:00" />
+<meta property="og:url" content="https://tonywu1995.github.io/mongo/mongo_backup_restore/" /><meta property="article:section" content="mongo" />
+<meta property="article:published_time" content="2021-09-21T16:45:55&#43;08:00" />
+<meta property="article:modified_time" content="2021-09-21T16:45:55&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Redis(一)"/>
-<meta name="twitter:description" content="介紹 Redis 是一個開源的in memory key value cache,常用來降低服務內的延遲情況
-Redis 支援的data type
-Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfields 現在讓我們開始安裝Redis
-安裝 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動
-確認redis服務，已經在執行
-λ docker exec -it redis sh /data # redis-cli 127.0.0.1:6379&gt; ping PONG 127.0.0.1:6379&gt; exit /data # redis-cli ping PONG /data # 小結 redis 已經安裝完成，下一章節將會開始使用java連接redis 參考連結 Redis "/>
+<meta name="twitter:title" content="Mongo備份與還原"/>
+<meta name="twitter:description" content="介紹 在工作上不免要定期備份database的資料與還原datdabase的資料 備份步驟 連線進入mongo mongo -u &lt;username&gt; -p &lt;password&gt; 切換db use admin 磁碟同步與上鎖 db.runCommand({fsync:1,lock:1}) 確認是否上鎖 db.currentOp() 備份資料 mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt; --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt; 解鎖 db.fsyncUnlock() 還原步驟 還原 mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt; 參考連結 Mongo "/>
 
 
 <script type="application/ld+json">
@@ -92,14 +77,14 @@ Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfi
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Devops",
-      "item": "https://tonywu1995.github.io/devops/"
+      "name": "Mongoes",
+      "item": "https://tonywu1995.github.io/mongo/"
     }, 
     {
       "@type": "ListItem",
       "position":  3 ,
-      "name": "Redis(一)",
-      "item": "https://tonywu1995.github.io/devops/redis/"
+      "name": "Mongo備份與還原",
+      "item": "https://tonywu1995.github.io/mongo/mongo_backup_restore/"
     }
   ]
 }
@@ -108,24 +93,24 @@ Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfi
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Redis(一)",
-  "name": "Redis(一)",
-  "description": "介紹 Redis 是一個開源的in memory key value cache,常用來降低服務內的延遲情況\nRedis 支援的data type\nStrings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfields 現在讓我們開始安裝Redis\n安裝 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: \u0026#39;3\u0026#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動\n確認redis服務，已經在執行\nλ docker exec -it redis sh /data # redis-cli 127.0.0.1:6379\u0026gt; ping PONG 127.0.0.1:6379\u0026gt; exit /data # redis-cli ping PONG /data # 小結 redis 已經安裝完成，下一章節將會開始使用java連接redis 參考連結 Redis ",
+  "headline": "Mongo備份與還原",
+  "name": "Mongo備份與還原",
+  "description": "介紹 在工作上不免要定期備份database的資料與還原datdabase的資料 備份步驟 連線進入mongo mongo -u \u0026lt;username\u0026gt; -p \u0026lt;password\u0026gt; 切換db use admin 磁碟同步與上鎖 db.runCommand({fsync:1,lock:1}) 確認是否上鎖 db.currentOp() 備份資料 mongodump --host \u0026lt;host-ip\u0026gt; --port 27017 --db \u0026lt;database\u0026gt; --authenticationDatabase admin --username \u0026lt;username\u0026gt; --password \u0026lt;password\u0026gt; --out \u0026lt;Path\u0026gt; 解鎖 db.fsyncUnlock() 還原步驟 還原 mongorestore --host \u0026lt;host-ip\u0026gt; --port 27017 --username \u0026lt;username\u0026gt; --password \u0026lt;password\u0026gt; --db \u0026lt;database\u0026gt; \u0026lt;backup file path\u0026gt; 參考連結 Mongo ",
   "keywords": [
-    "devops", "redis"
+    "devops", "mongo"
   ],
-  "articleBody": "介紹 Redis 是一個開源的in memory key value cache,常用來降低服務內的延遲情況\nRedis 支援的data type\nStrings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfields 現在讓我們開始安裝Redis\n安裝 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: '3' services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動\n確認redis服務，已經在執行\nλ docker exec -it redis sh /data # redis-cli 127.0.0.1:6379\u003e ping PONG 127.0.0.1:6379\u003e exit /data # redis-cli ping PONG /data # 小結 redis 已經安裝完成，下一章節將會開始使用java連接redis 參考連結 Redis ",
-  "wordCount" : "71",
+  "articleBody": "介紹 在工作上不免要定期備份database的資料與還原datdabase的資料 備份步驟 連線進入mongo mongo -u -p 切換db use admin 磁碟同步與上鎖 db.runCommand({fsync:1,lock:1}) 確認是否上鎖 db.currentOp() 備份資料 mongodump --host --port 27017 --db --authenticationDatabase admin --username --password --out 解鎖 db.fsyncUnlock() 還原步驟 還原 mongorestore --host --port 27017 --username --password --db 參考連結 Mongo ",
+  "wordCount" : "52",
   "inLanguage": "zh-tw",
-  "datePublished": "2022-10-30T19:37:19+08:00",
-  "dateModified": "2022-10-30T19:37:19+08:00",
+  "datePublished": "2021-09-21T16:45:55+08:00",
+  "dateModified": "2021-09-21T16:45:55+08:00",
   "author":{
     "@type": "Person",
     "name": "Tony"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://tonywu1995.github.io/devops/redis/"
+    "@id": "https://tonywu1995.github.io/mongo/mongo_backup_restore/"
   },
   "publisher": {
     "@type": "Organization",
@@ -211,74 +196,50 @@ Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfi
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://tonywu1995.github.io">Home</a>&nbsp;»&nbsp;<a href="https://tonywu1995.github.io/devops/">Devops</a></div>
+    <div class="breadcrumbs"><a href="https://tonywu1995.github.io">Home</a>&nbsp;»&nbsp;<a href="https://tonywu1995.github.io/mongo/">Mongoes</a></div>
     <h1 class="post-title">
-      Redis(一)
+      Mongo備份與還原
     </h1>
-    <div class="post-meta">2022-10-30 October Sunday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony
+    <div class="post-meta">2021-09-21 September Tuesday&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Tony
 </div>
   </header> 
   <div class="post-content"><h1 id="介紹">介紹<a hidden class="anchor" aria-hidden="true" href="#介紹">#</a></h1>
 <ul>
-<li>
-<p>Redis 是一個開源的in memory key value cache,常用來降低服務內的延遲情況</p>
-</li>
-<li>
-<p>Redis 支援的data type</p>
+<li>在工作上不免要定期備份database的資料與還原datdabase的資料</li>
+</ul>
+<h2 id="備份步驟">備份步驟<a hidden class="anchor" aria-hidden="true" href="#備份步驟">#</a></h2>
+<ol>
+<li>連線進入mongo</li>
+</ol>
+<pre tabindex="0"><code>mongo -u &lt;username&gt; -p &lt;password&gt;
+</code></pre><ol start="2">
+<li>切換db</li>
+</ol>
+<pre tabindex="0"><code>use admin
+</code></pre><ol start="3">
+<li>磁碟同步與上鎖</li>
+</ol>
+<pre tabindex="0"><code>db.runCommand({fsync:1,lock:1})
+</code></pre><ol start="4">
+<li>確認是否上鎖</li>
+</ol>
+<pre tabindex="0"><code>db.currentOp()
+</code></pre><ol start="5">
+<li>備份資料</li>
+</ol>
+<pre tabindex="0"><code>mongodump --host &lt;host-ip&gt; --port 27017 --db &lt;database&gt;  --authenticationDatabase admin --username &lt;username&gt; --password &lt;password&gt; --out &lt;Path&gt;
+</code></pre><ol start="6">
+<li>解鎖</li>
+</ol>
+<pre tabindex="0"><code>db.fsyncUnlock()
+</code></pre><h2 id="還原步驟">還原步驟<a hidden class="anchor" aria-hidden="true" href="#還原步驟">#</a></h2>
+<ol>
+<li>還原</li>
+</ol>
+<pre tabindex="0"><code>mongorestore --host &lt;host-ip&gt; --port 27017 --username &lt;username&gt; --password &lt;password&gt; --db &lt;database&gt; &lt;backup file path&gt;
+</code></pre><h1 id="參考連結">參考連結<a hidden class="anchor" aria-hidden="true" href="#參考連結">#</a></h1>
 <ul>
-<li>Strings</li>
-<li>Lists</li>
-<li>Sets</li>
-<li>Hash</li>
-<li>Sroted sets</li>
-<li>Streams</li>
-<li>Geospatial</li>
-<li>HyperLogLog</li>
-<li>Bitmaps</li>
-<li>Bitfields</li>
-</ul>
-</li>
-<li>
-<p>現在讓我們開始安裝Redis</p>
-</li>
-</ul>
-<h1 id="安裝-redis">安裝 Redis<a hidden class="anchor" aria-hidden="true" href="#安裝-redis">#</a></h1>
-<ul>
-<li>建立一個新的folder，命名redis-server</li>
-<li>在redis-server目錄底下，建立docker-compose.yml</li>
-<li>docker-compose.yml 底下輸入</li>
-</ul>
-<pre tabindex="0"><code>version: &#39;3&#39;
-services:
-  redis:
-    restart: always
-    container_name: redis
-    image: redis:6.2.7-alpine
-    ports:
-      - 6379:6379
-</code></pre><ul>
-<li>
-<p>執行<code>docker-compose up -d</code>，redis服務即可啟動</p>
-</li>
-<li>
-<p>確認redis服務，已經在執行</p>
-</li>
-</ul>
-<pre tabindex="0"><code>λ docker exec -it redis sh
-/data # redis-cli
-127.0.0.1:6379&gt; ping
-PONG
-127.0.0.1:6379&gt; exit
-/data # redis-cli ping
-PONG
-/data #
-</code></pre><h1 id="小結">小結<a hidden class="anchor" aria-hidden="true" href="#小結">#</a></h1>
-<ul>
-<li>redis 已經安裝完成，下一章節將會開始使用java連接redis</li>
-</ul>
-<h1 id="參考連結">參考連結<a hidden class="anchor" aria-hidden="true" href="#參考連結">#</a></h1>
-<ul>
-<li><a href="https://redis.io/">Redis</a></li>
+<li><a href="https://docs.mongodb.com/">Mongo</a></li>
 </ul>
 
 
@@ -287,15 +248,8 @@ PONG
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://tonywu1995.github.io/tags/devops/">devops</a></li>
-      <li><a href="https://tonywu1995.github.io/tags/redis/">redis</a></li>
+      <li><a href="https://tonywu1995.github.io/tags/mongo/">mongo</a></li>
     </ul>
-<nav class="paginav">
-  <a class="next" href="https://tonywu1995.github.io/java/aop-1/">
-    <span class="title"> »</span>
-    <br>
-    <span>Aop(上)</span>
-  </a>
-</nav>
 
   </footer>
 </article>

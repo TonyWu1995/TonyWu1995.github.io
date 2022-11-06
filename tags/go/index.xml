@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>go on Tony Wu&#39;s Blog</title>
+    <link>https://tonywu1995.github.io/tags/go/</link>
+    <description>Recent content in go on Tony Wu&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 06 Nov 2022 19:37:19 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode1108 Defanging an IP Address</title>
+      <link>https://tonywu1995.github.io/leetcode/1108/</link>
+      <pubDate>Sun, 06 Nov 2022 19:37:19 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/1108/</guid>
+      <description>題目 Given a valid (IPv4) IP address, return a defanged version of that IP address.
+A defanged IP address replaces every period &amp;ldquo;.&amp;rdquo; with &amp;ldquo;[.]&amp;rdquo;.
+Example 1:
+Input: address = &amp;ldquo;1.1.1.1&amp;rdquo; Output: &amp;ldquo;1[.]1[.]1[.]1&amp;rdquo; Example 2:
+Input: address = &amp;ldquo;255.100.50.0&amp;rdquo; Output: &amp;ldquo;255[.]100[.]50[.]0&amp;rdquo;
+題意: 將字串.替換成[.]就好了 解法 import ( &amp;#34;strings&amp;#34; ) func defangIPaddr(address string) string { return strings.Replace(address, &amp;#34;.&amp;#34;, &amp;#34;[.]&amp;#34;, -1) } 加個測試，看看結果是不是如預期 import ( &amp;#34;github.com/stretchr/testify/assert&amp;#34; &amp;#34;testing&amp;#34; ) func Test_defangIPaddr(t *testing.T) { address := &amp;#34;1.</description>
+    </item>
+    
+  </channel>
+</rss>

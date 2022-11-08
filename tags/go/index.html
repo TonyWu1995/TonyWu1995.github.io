@@ -6,11 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>go | Tony Wu&#39;s Blog</title>
+
 <meta name="keywords" content="" />
 <meta name="description" content="工作上收集整理使用的工具與筆記">
 <meta name="author" content="Tony">
 <link rel="canonical" href="https://tonywu1995.github.io/tags/go/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
+<link href="/assets/css/stylesheet.min.746a86b58bb2b052b5e4df8216510494f04f81e62c08d626150c26c69ca929da.css" integrity="sha256-dGqGtYuysFK15N&#43;CFlEElPBPgeYsCNYmFQwmxpypKdo=" rel="preload stylesheet"
+    as="style">
+
 <link rel="icon" href="https://tonywu1995.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://tonywu1995.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://tonywu1995.github.io/favicon-32x32.png">
@@ -19,54 +22,20 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.105.0">
-<link rel="alternate" type="application/rss+xml" href="https://tonywu1995.github.io/tags/go/index.xml">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+<link rel="alternate" type="application/rss&#43;xml" href="https://tonywu1995.github.io/tags/go/index.xml">
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
 
-            .list {
-                background: var(--theme);
-            }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB56NB3G32"></script>
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-KB56NB3G32', 'auto');
+	
+	ga('send', 'pageview');
 }
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 <meta property="og:title" content="go" />
 <meta property="og:description" content="工作上收集整理使用的工具與筆記" />
 <meta property="og:type" content="website" />
@@ -75,6 +44,8 @@ if (!doNotTrack) {
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="go"/>
 <meta name="twitter:description" content="工作上收集整理使用的工具與筆記"/>
+
+
 
 </head>
 
@@ -89,7 +60,43 @@ if (!doNotTrack) {
     }
 
 </script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+    </style>
+
+</noscript>
 <header class="header">
     <nav class="nav">
         <div class="logo">
@@ -115,9 +122,11 @@ if (!doNotTrack) {
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                
+                
             </span>
         </div>
-        <ul id="menu">
+        <ul id="menu" onscroll="menu_on_scroll()">
             <li>
                 <a href="https://tonywu1995.github.io/" title="Home">
                     <span>Home</span>
@@ -142,18 +151,25 @@ if (!doNotTrack) {
                 <a href="https://tonywu1995.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
-            </li>
-        </ul>
+            </li></ul>
     </nav>
 </header>
-<main class="main"> 
+
+    <main class="main"> 
 <header class="page-header">
+
   <h1>go</h1>
 </header>
 
+
+
+
+
 <article class="post-entry tag-entry"> 
+
   <header class="entry-header">
-    <h2>LeetCode2011 Final Value of Variable After Performing Operations
+    <h2>
+      LeetCode2011 Final Value of Variable After Performing Operations
     </h2>
   </header>
   <section class="entry-content">
@@ -162,13 +178,18 @@ if (!doNotTrack) {
 Given an array of strings operations containing a list of operations, return the final value of X after performing all the operations.
 Input: operations = [&#34;–X&#34;,“X&#43;&#43;”,“X&#43;&#43;”] Output: 1 Explanation: The operations are performed as follows: Initially, X = 0....</p>
   </section>
-  <footer class="entry-footer"><span title='2022-11-06 22:03:35 +0800 +0800'>2022-11-06 November Sunday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
+  <footer class="entry-footer">
+
+2022-11-06 November Sunday&nbsp;·&nbsp;%!s(int=1) min&nbsp;·&nbsp;Tony
+</footer>
   <a class="entry-link" aria-label="post link to LeetCode2011 Final Value of Variable After Performing Operations" href="https://tonywu1995.github.io/leetcode/2011/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
+
   <header class="entry-header">
-    <h2>LeetCode1108 Defanging an IP Address
+    <h2>
+      LeetCode1108 Defanging an IP Address
     </h2>
   </header>
   <section class="entry-content">
@@ -179,27 +200,32 @@ Input: address = “1.1.1.1” Output: “1[.]1[.]1[.]1” Example 2:
 Input: address = “255.100.50.0” Output: “255[.]100[.]50[.]0”
 題意: 將字串.替換成[.]就好了 解法 import ( &#34;strings&#34; ) func defangIPaddr(address string) string { return strings.Replace(address, &#34;.&#34;, &#34;[.]&#34;, -1) } 加個測試，看看結果是不是如預期 import ( &#34;github.com/stretchr/testify/assert&#34; &#34;testing&#34; ) func Test_defangIPaddr(t *testing.T) { address := &#34;1....</p>
   </section>
-  <footer class="entry-footer"><span title='2022-11-06 19:37:19 +0800 +0800'>2022-11-06 November Sunday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
+  <footer class="entry-footer">
+
+2022-11-06 November Sunday&nbsp;·&nbsp;%!s(int=1) min&nbsp;·&nbsp;Tony
+</footer>
   <a class="entry-link" aria-label="post link to LeetCode1108 Defanging an IP Address" href="https://tonywu1995.github.io/leetcode/1108/"></a>
 </article>
-    </main>
-    
-<footer class="footer">
+
+    </main><footer class="footer">
     <span>&copy; 2022 <a href="https://tonywu1995.github.io">Tony Wu&#39;s Blog</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+    <span>&middot;</span>
+    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
+    <span>&middot;</span>
+    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
 </footer>
 
+
+
 <script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    window.onload = function () {
+        if (localStorage.getItem("menu-scroll-position")) {
+            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
         }
+    }
+
+    function menu_on_scroll() {
+        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -234,6 +260,7 @@ Input: address = “255.100.50.0” Output: “255[.]100[.]50[.]0”
     })
 
 </script>
+
 </body>
 
 </html>

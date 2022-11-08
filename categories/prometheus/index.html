@@ -6,14 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>prometheus | Tony Wu&#39;s Blog</title>
-
 <meta name="keywords" content="" />
 <meta name="description" content="工作上收集整理使用的工具與筆記">
 <meta name="author" content="Tony">
 <link rel="canonical" href="https://tonywu1995.github.io/categories/prometheus/" />
-<link href="/assets/css/stylesheet.min.746a86b58bb2b052b5e4df8216510494f04f81e62c08d626150c26c69ca929da.css" integrity="sha256-dGqGtYuysFK15N&#43;CFlEElPBPgeYsCNYmFQwmxpypKdo=" rel="preload stylesheet"
-    as="style">
-
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://tonywu1995.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://tonywu1995.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://tonywu1995.github.io/favicon-32x32.png">
@@ -22,46 +19,9 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.105.0">
-<link rel="alternate" type="application/rss&#43;xml" href="https://tonywu1995.github.io/categories/prometheus/index.xml">
-
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-KB56NB3G32', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<meta property="og:title" content="prometheus" />
-<meta property="og:description" content="工作上收集整理使用的工具與筆記" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tonywu1995.github.io/categories/prometheus/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="prometheus"/>
-<meta name="twitter:description" content="工作上收集整理使用的工具與筆記"/>
-
-
-
-</head>
-
-<body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
+<link rel="alternate" type="application/rss+xml" href="https://tonywu1995.github.io/categories/prometheus/index.xml">
 <noscript>
-    <style type="text/css">
+    <style>
         #theme-toggle,
         .top-link {
             display: none;
@@ -71,15 +31,15 @@ if (!doNotTrack) {
     <style>
         @media (prefers-color-scheme: dark) {
             :root {
-                --theme: #1d1e20;
-                --entry: #2e2e33;
-                --primary: rgba(255, 255, 255, 0.84);
-                --secondary: rgba(255, 255, 255, 0.56);
-                --tertiary: rgba(255, 255, 255, 0.16);
-                --content: rgba(255, 255, 255, 0.74);
-                --hljs-bg: #2e2e33;
-                --code-bg: #37383e;
-                --border: #333;
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
             }
 
             .list {
@@ -94,13 +54,46 @@ if (!doNotTrack) {
                 border-color: var(--theme);
             }
         }
-    </style>
 
+    </style>
 </noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB56NB3G32"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
+}
+</script>
+<meta property="og:title" content="prometheus" />
+<meta property="og:description" content="工作上收集整理使用的工具與筆記" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tonywu1995.github.io/categories/prometheus/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="prometheus"/>
+<meta name="twitter:description" content="工作上收集整理使用的工具與筆記"/>
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://tonywu1995.github.io" accesskey="h" title="Tony Wu&#39;s Blog (Alt + H)">Tony Wu&#39;s Blog</a>
+            <a href="https://tonywu1995.github.io/" accesskey="h" title="Tony Wu&#39;s Blog (Alt + H)">Tony Wu&#39;s Blog</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -122,11 +115,9 @@ if (!doNotTrack) {
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                
-                
             </span>
         </div>
-        <ul id="menu" onscroll="menu_on_scroll()">
+        <ul id="menu">
             <li>
                 <a href="https://tonywu1995.github.io/" title="Home">
                     <span>Home</span>
@@ -151,73 +142,56 @@ if (!doNotTrack) {
                 <a href="https://tonywu1995.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
-            </li></ul>
+            </li>
+        </ul>
     </nav>
 </header>
-
-    <main class="main"> 
+<main class="main"> 
 <header class="page-header">
-
   <h1>prometheus</h1>
 </header>
 
-
-
-
-
 <article class="post-entry tag-entry"> 
-
   <header class="entry-header">
-    <h2>
-      Node Exporter安裝
+    <h2>Node Exporter安裝
     </h2>
   </header>
   <section class="entry-content">
     <p>前言 node exporter是用來監控Linux vm的一個Prometheus Client 提供: CPU 使用率、硬碟使用率… metrics 步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bash version=&#34;${VERSION:-1.2.2}&#34; arch=&#34;${ARCH:-linux-amd64}&#34; bin_dir=&#34;${BIN_DIR:-/usr/local/bin}&#34; wget &#34;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&#34; \ -O /tmp/node_exporter.tar.gz mkdir -p /tmp/node_exporter cd /tmp || { echo &#34;ERROR! No /tmp found..&#34;; exit 1; } tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &#34;ERROR! Extracting the node_exporter tar&#34;; exit 1; } sudo cp &#34;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&#34; &#34;$bin_dir&#34; chown root:staff &#34;$bin_dir/node_exporter&#34; sudo cat &lt;&lt;EOF &gt; /etc/systemd/system/node_exporter.service [Unit] Description=Node Exporter After=network.target [Service] Type=simple ExecStart=/usr/local/bin/node_exporter [Install] WantedBy=multi-user....</p>
   </section>
-  <footer class="entry-footer">
-
-2021-10-03 October Sunday&nbsp;·&nbsp;%!s(int=1) min&nbsp;·&nbsp;Tony
-</footer>
+  <footer class="entry-footer"><span title='2021-10-03 16:25:57 +0800 +0800'>2021-10-03 October Sunday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
   <a class="entry-link" aria-label="post link to Node Exporter安裝" href="https://tonywu1995.github.io/prometheus/node-exporter/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
-
   <header class="entry-header">
-    <h2>
-      Spring Boot監控(中)
+    <h2>Spring Boot監控(中)
     </h2>
   </header>
   <section class="entry-content">
     <p>步驟 安裝Prometheus/Grafana 設定Prometheus設定向我們spring boot application位置 # my global configglobal:scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.scrape_configs:# The job name is added as a label `job=&lt;job_name&gt;` to any timeseries scraped from this config.- job_name: &#39;My-Spring-Boot-Application&#39;# Override the global default and scrape targets from this job every 5 seconds....</p>
   </section>
-  <footer class="entry-footer">
-
-2021-10-03 October Sunday&nbsp;·&nbsp;%!s(int=1) min&nbsp;·&nbsp;Tony
-</footer>
+  <footer class="entry-footer"><span title='2021-10-03 16:25:57 +0800 +0800'>2021-10-03 October Sunday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
   <a class="entry-link" aria-label="post link to Spring Boot監控(中)" href="https://tonywu1995.github.io/java/spring-boot-monitor-2/"></a>
 </article>
-
-    </main><footer class="footer">
-    <span>&copy; 2022 <a href="https://tonywu1995.github.io">Tony Wu&#39;s Blog</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://tonywu1995.github.io/">Tony Wu&#39;s Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
 
-
-
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
-    }
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -252,7 +226,6 @@ if (!doNotTrack) {
     })
 
 </script>
-
 </body>
 
 </html>

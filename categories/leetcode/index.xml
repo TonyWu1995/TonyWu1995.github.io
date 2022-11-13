@@ -5,7 +5,18 @@
     <link>https://tonywu1995.github.io/categories/leetcode/</link>
     <description>Recent content in leetcode on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 06 Nov 2022 22:03:35 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Nov 2022 23:08:53 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode1528 Shuffle String</title>
+      <link>https://tonywu1995.github.io/leetcode/1528/</link>
+      <pubDate>Sun, 13 Nov 2022 23:08:53 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/1528/</guid>
+      <description>題目 You are given a string s and an integer array indices of the same length. The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
+Return the shuffled string.
+Example 1 Input: s = &amp;#34;codeleet&amp;#34;, indices = [4,5,6,7,0,2,1,3] Output: &amp;#34;leetcode&amp;#34; Explanation: As shown, &amp;#34;codeleet&amp;#34; becomes &amp;#34;leetcode&amp;#34; after shuffling. 題意: indices的值為字串s替換要替換的位置 字串 : 位置 c -&amp;gt; 4 o -&amp;gt; 5 d -&amp;gt; 6 依此類推 解法 func restoreString(s string, indices []int) string { res := make([]byte, len(s)) for k, v := range indices { res[v] = s[k] } return string(res) } 加個測試，看看結果是不是如預期 import ( &amp;#34;github.</description>
+    </item>
+    
     <item>
       <title>LeetCode2011 Final Value of Variable After Performing Operations</title>
       <link>https://tonywu1995.github.io/leetcode/2011/</link>
@@ -15,7 +26,7 @@
       <description>題目 There is a programming language with only four operations and one variable X:
 ++X and X++ increments the value of the variable X by 1. &amp;ndash;X and X&amp;ndash; decrements the value of the variable X by 1. Initially, the value of X is 0.
 Given an array of strings operations containing a list of operations, return the final value of X after performing all the operations.
-Input: operations = [&amp;quot;&amp;ndash;X&amp;quot;,&amp;ldquo;X++&amp;rdquo;,&amp;ldquo;X++&amp;rdquo;] Output: 1 Explanation: The operations are performed as follows: Initially, X = 0.</description>
+Example Input: operations = [&amp;#34;--X&amp;#34;,&amp;#34;X++&amp;#34;,&amp;#34;X++&amp;#34;] Output: 1 Explanation: The operations are performed as follows: Initially, X = 0.</description>
     </item>
     
     <item>
@@ -26,10 +37,8 @@ Input: operations = [&amp;quot;&amp;ndash;X&amp;quot;,&amp;ldquo;X++&amp;rdquo;,
       <guid>https://tonywu1995.github.io/leetcode/1108/</guid>
       <description>題目 Given a valid (IPv4) IP address, return a defanged version of that IP address.
 A defanged IP address replaces every period &amp;ldquo;.&amp;rdquo; with &amp;ldquo;[.]&amp;rdquo;.
-Example 1:
-Input: address = &amp;ldquo;1.1.1.1&amp;rdquo; Output: &amp;ldquo;1[.]1[.]1[.]1&amp;rdquo; Example 2:
-Input: address = &amp;ldquo;255.100.50.0&amp;rdquo; Output: &amp;ldquo;255[.]100[.]50[.]0&amp;rdquo;
-題意: 將字串.替換成[.]就好了 解法 import ( &amp;#34;strings&amp;#34; ) func defangIPaddr(address string) string { return strings.Replace(address, &amp;#34;.&amp;#34;, &amp;#34;[.]&amp;#34;, -1) } 加個測試，看看結果是不是如預期 import ( &amp;#34;github.com/stretchr/testify/assert&amp;#34; &amp;#34;testing&amp;#34; ) func Test_defangIPaddr(t *testing.T) { address := &amp;#34;1.</description>
+##　Example 1:
+Input: address = &amp;#34;1.1.1.1&amp;#34; Output: &amp;#34;1[.]1[.]1[.]1&amp;#34; Example 2: Input: address = &amp;#34;255.100.50.0&amp;#34; Output: &amp;#34;255[.]100[.]50[.]0&amp;#34; 題意: 將字串.替換成[.]就好了 解法 import ( &amp;#34;strings&amp;#34; ) func defangIPaddr(address string) string { return strings.Replace(address, &amp;#34;.&amp;#34;, &amp;#34;[.]&amp;#34;, -1) } 加個測試，看看結果是不是如預期 import ( &amp;#34;github.com/stretchr/testify/assert&amp;#34; &amp;#34;testing&amp;#34; ) func Test_defangIPaddr(t *testing.T) { address := &amp;#34;1.</description>
     </item>
     
   </channel>

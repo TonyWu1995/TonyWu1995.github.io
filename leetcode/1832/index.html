@@ -5,12 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>LeetCode2325 Decode the Message | Tony Wu&#39;s Blog</title>
+<title>LeetCode1832 Check if the Sentence Is Pangram | Tony Wu&#39;s Blog</title>
 <meta name="keywords" content="leetcode, go" />
-<meta name="description" content="題目 You are given the strings key and message, which represent a cipher key and a secret message, respectively. The steps to decode message are as follows:
-Use the first appearance of all 26 lowercase English letters in key as the order of the substitution table. Align the substitution table with the regular English alphabet. Each letter in message is then substituted using the table. Spaces &rsquo; &rsquo; are transformed to themselves.">
+<meta name="description" content="題目 A pangram is a sentence where every letter of the English alphabet appears at least once.
+Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.
+Example Input: sentence = &#34;thequickbrownfoxjumpsoverthelazydog&#34; Output: true Explanation: sentence contains at least one of every letter of the English alphabet. 題意: sentence中至少要出現一次a-z 解法 import ( &#34;strings&#34; ) func checkIfPangram(sentence string) bool { if len(sentence) &lt; 26 { return false } for i := &#39;a&#39;; i &lt;= &#39;z&#39;; i&#43;&#43; { if strings.">
 <meta name="author" content="Tony">
-<link rel="canonical" href="https://tonywu1995.github.io/leetcode/2325/" />
+<link rel="canonical" href="https://tonywu1995.github.io/leetcode/1832/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -69,18 +70,20 @@ if (!doNotTrack) {
 	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
 }
 </script>
-<meta property="og:title" content="LeetCode2325 Decode the Message" />
-<meta property="og:description" content="題目 You are given the strings key and message, which represent a cipher key and a secret message, respectively. The steps to decode message are as follows:
-Use the first appearance of all 26 lowercase English letters in key as the order of the substitution table. Align the substitution table with the regular English alphabet. Each letter in message is then substituted using the table. Spaces &rsquo; &rsquo; are transformed to themselves." />
+<meta property="og:title" content="LeetCode1832 Check if the Sentence Is Pangram" />
+<meta property="og:description" content="題目 A pangram is a sentence where every letter of the English alphabet appears at least once.
+Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.
+Example Input: sentence = &#34;thequickbrownfoxjumpsoverthelazydog&#34; Output: true Explanation: sentence contains at least one of every letter of the English alphabet. 題意: sentence中至少要出現一次a-z 解法 import ( &#34;strings&#34; ) func checkIfPangram(sentence string) bool { if len(sentence) &lt; 26 { return false } for i := &#39;a&#39;; i &lt;= &#39;z&#39;; i&#43;&#43; { if strings." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tonywu1995.github.io/leetcode/2325/" /><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2022-11-24T16:16:21&#43;08:00" />
-<meta property="article:modified_time" content="2022-11-24T16:16:21&#43;08:00" />
+<meta property="og:url" content="https://tonywu1995.github.io/leetcode/1832/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-11-24T16:31:05&#43;08:00" />
+<meta property="article:modified_time" content="2022-11-24T16:31:05&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="LeetCode2325 Decode the Message"/>
-<meta name="twitter:description" content="題目 You are given the strings key and message, which represent a cipher key and a secret message, respectively. The steps to decode message are as follows:
-Use the first appearance of all 26 lowercase English letters in key as the order of the substitution table. Align the substitution table with the regular English alphabet. Each letter in message is then substituted using the table. Spaces &rsquo; &rsquo; are transformed to themselves."/>
+<meta name="twitter:title" content="LeetCode1832 Check if the Sentence Is Pangram"/>
+<meta name="twitter:description" content="題目 A pangram is a sentence where every letter of the English alphabet appears at least once.
+Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.
+Example Input: sentence = &#34;thequickbrownfoxjumpsoverthelazydog&#34; Output: true Explanation: sentence contains at least one of every letter of the English alphabet. 題意: sentence中至少要出現一次a-z 解法 import ( &#34;strings&#34; ) func checkIfPangram(sentence string) bool { if len(sentence) &lt; 26 { return false } for i := &#39;a&#39;; i &lt;= &#39;z&#39;; i&#43;&#43; { if strings."/>
 
 
 <script type="application/ld+json">
@@ -97,8 +100,8 @@ Use the first appearance of all 26 lowercase English letters in key as the order
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "LeetCode2325 Decode the Message",
-      "item": "https://tonywu1995.github.io/leetcode/2325/"
+      "name": "LeetCode1832 Check if the Sentence Is Pangram",
+      "item": "https://tonywu1995.github.io/leetcode/1832/"
     }
   ]
 }
@@ -107,24 +110,24 @@ Use the first appearance of all 26 lowercase English letters in key as the order
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "LeetCode2325 Decode the Message",
-  "name": "LeetCode2325 Decode the Message",
-  "description": "題目 You are given the strings key and message, which represent a cipher key and a secret message, respectively. The steps to decode message are as follows:\nUse the first appearance of all 26 lowercase English letters in key as the order of the substitution table. Align the substitution table with the regular English alphabet. Each letter in message is then substituted using the table. Spaces \u0026rsquo; \u0026rsquo; are transformed to themselves.",
+  "headline": "LeetCode1832 Check if the Sentence Is Pangram",
+  "name": "LeetCode1832 Check if the Sentence Is Pangram",
+  "description": "題目 A pangram is a sentence where every letter of the English alphabet appears at least once.\nGiven a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.\nExample Input: sentence = \u0026#34;thequickbrownfoxjumpsoverthelazydog\u0026#34; Output: true Explanation: sentence contains at least one of every letter of the English alphabet. 題意: sentence中至少要出現一次a-z 解法 import ( \u0026#34;strings\u0026#34; ) func checkIfPangram(sentence string) bool { if len(sentence) \u0026lt; 26 { return false } for i := \u0026#39;a\u0026#39;; i \u0026lt;= \u0026#39;z\u0026#39;; i++ { if strings.",
   "keywords": [
     "leetcode", "go"
   ],
-  "articleBody": "題目 You are given the strings key and message, which represent a cipher key and a secret message, respectively. The steps to decode message are as follows:\nUse the first appearance of all 26 lowercase English letters in key as the order of the substitution table. Align the substitution table with the regular English alphabet. Each letter in message is then substituted using the table. Spaces ’ ’ are transformed to themselves. For example, given key = “happy boy” (actual key would have at least one instance of each letter in the alphabet), we have the partial substitution table of (‘h’ -\u003e ‘a’, ‘a’ -\u003e ‘b’, ‘p’ -\u003e ‘c’, ‘y’ -\u003e ’d’, ‘b’ -\u003e ’e’, ‘o’ -\u003e ‘f’). Return the decoded message.\nExample 1 Input: key = \"the quick brown fox jumps over the lazy dog\", message = \"vkbs bs t suepuv\" Output: \"this is a secret\" Explanation: The diagram above shows the substitution table. It is obtained by taking the first appearance of each letter in \"the quick brown fox jumps over the lazy dog\". 題意: 將key中的字串透過abcdef…對應，之後透過message解法成正確的意思 解法 import ( \"strings\" ) var alpha = [26]string{ \"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\", \"k\", \"l\", \"m\", \"n\", \"o\", \"p\", \"q\", \"r\", \"s\", \"t\", \"u\", \"v\", \"w\", \"x\", \"y\", \"z\", } func decodeMessage(key string, message string) string { m := map[int32]string{} index := 0 for _, v := range key { _, isExist := m[v] if v != 32 \u0026\u0026 !isExist { m[v] = alpha[index] index++ } } res := strings.Builder{} for _, v := range message { if v == 32 { res.WriteString(\" \") } else { res.WriteString(m[v]) } } return res.String() } 寫個測試證明結果是否如預期 func Test_decodeMessage(t *testing.T) { res := decodeMessage(\"the quick brown fox jumps over the lazy dog\", \"vkbs bs t suepuv\") fmt.Println(res) assert.Equal(t, \"this is a secret\", res) } 參考連結 原本題目 solution ",
-  "wordCount" : "308",
+  "articleBody": "題目 A pangram is a sentence where every letter of the English alphabet appears at least once.\nGiven a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.\nExample Input: sentence = \"thequickbrownfoxjumpsoverthelazydog\" Output: true Explanation: sentence contains at least one of every letter of the English alphabet. 題意: sentence中至少要出現一次a-z 解法 import ( \"strings\" ) func checkIfPangram(sentence string) bool { if len(sentence) \u003c 26 { return false } for i := 'a'; i \u003c= 'z'; i++ { if strings.Index(sentence, string(i)) == -1 { return false } } return true } 加個測試，看看結果是不是如預期 func TestCheckIfPangram(t *testing.T) { assert.Equal(t, true, checkIfPangram(\"thequickbrownfoxjumpsoverthelazydog\")) assert.Equal(t, false, checkIfPangram(\"leetcode\")) } 參考連結 原本題目 solution ",
+  "wordCount" : "113",
   "inLanguage": "zh-tw",
-  "datePublished": "2022-11-24T16:16:21+08:00",
-  "dateModified": "2022-11-24T16:16:21+08:00",
+  "datePublished": "2022-11-24T16:31:05+08:00",
+  "dateModified": "2022-11-24T16:31:05+08:00",
   "author":{
     "@type": "Person",
     "name": "Tony"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://tonywu1995.github.io/leetcode/2325/"
+    "@id": "https://tonywu1995.github.io/leetcode/1832/"
   },
   "publisher": {
     "@type": "Organization",
@@ -212,71 +215,49 @@ Use the first appearance of all 26 lowercase English letters in key as the order
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://tonywu1995.github.io/">首頁</a>&nbsp;»&nbsp;<a href="https://tonywu1995.github.io/leetcode/">Leetcodes</a></div>
     <h1 class="post-title">
-      LeetCode2325 Decode the Message
+      LeetCode1832 Check if the Sentence Is Pangram
     </h1>
-    <div class="post-meta"><span title='2022-11-24 16:16:21 +0800 +0800'>2022-11-24 November Thursday</span>&nbsp;·&nbsp;2 分鐘&nbsp;·&nbsp;Tony
+    <div class="post-meta"><span title='2022-11-24 16:31:05 +0800 +0800'>2022-11-24 November Thursday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony
 
 </div>
   </header> 
   <div class="post-content"><h1 id="題目">題目<a hidden class="anchor" aria-hidden="true" href="#題目">#</a></h1>
-<p>You are given the strings key and message, which represent a cipher key and a secret message, respectively. The steps to decode message are as follows:</p>
-<p>Use the first appearance of all 26 lowercase English letters in key as the order of the substitution table.
-Align the substitution table with the regular English alphabet.
-Each letter in message is then substituted using the table.
-Spaces &rsquo; &rsquo; are transformed to themselves.
-For example, given key = &ldquo;happy boy&rdquo; (actual key would have at least one instance of each letter in the alphabet), we have the partial substitution table of (&lsquo;h&rsquo; -&gt; &lsquo;a&rsquo;, &lsquo;a&rsquo; -&gt; &lsquo;b&rsquo;, &lsquo;p&rsquo; -&gt; &lsquo;c&rsquo;, &lsquo;y&rsquo; -&gt; &rsquo;d&rsquo;, &lsquo;b&rsquo; -&gt; &rsquo;e&rsquo;, &lsquo;o&rsquo; -&gt; &lsquo;f&rsquo;).
-Return the decoded message.</p>
-<h2 id="example-1">Example 1<a hidden class="anchor" aria-hidden="true" href="#example-1">#</a></h2>
-<pre tabindex="0"><code>Input: key = &#34;the quick brown fox jumps over the lazy dog&#34;, message = &#34;vkbs bs t suepuv&#34;
-Output: &#34;this is a secret&#34;
-Explanation: The diagram above shows the substitution table.
-It is obtained by taking the first appearance of each letter in &#34;the quick brown fox jumps over the lazy dog&#34;.
+<p>A pangram is a sentence where every letter of the English alphabet appears at least once.</p>
+<p>Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.</p>
+<h2 id="example">Example<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h2>
+<pre tabindex="0"><code>Input: sentence = &#34;thequickbrownfoxjumpsoverthelazydog&#34;
+Output: true
+Explanation: sentence contains at least one of every letter of the English alphabet.
 </code></pre><ul>
-<li>題意: 將key中的字串透過abcdef&hellip;對應，之後透過message解法成正確的意思</li>
+<li>題意: sentence中至少要出現一次a-z</li>
 </ul>
 <h1 id="解法">解法<a hidden class="anchor" aria-hidden="true" href="#解法">#</a></h1>
 <pre tabindex="0"><code>import (
 	&#34;strings&#34;
 )
 
-var alpha = [26]string{
-	&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, &#34;d&#34;, &#34;e&#34;, &#34;f&#34;, &#34;g&#34;, &#34;h&#34;, &#34;i&#34;, &#34;j&#34;, &#34;k&#34;,
-	&#34;l&#34;, &#34;m&#34;, &#34;n&#34;, &#34;o&#34;, &#34;p&#34;, &#34;q&#34;, &#34;r&#34;, &#34;s&#34;, &#34;t&#34;, &#34;u&#34;, &#34;v&#34;,
-	&#34;w&#34;, &#34;x&#34;, &#34;y&#34;, &#34;z&#34;,
-}
-
-func decodeMessage(key string, message string) string {
-    m := map[int32]string{}
-	index := 0
-	for _, v := range key {
-		_, isExist := m[v]
-		if v != 32 &amp;&amp; !isExist {
-			m[v] = alpha[index]
-			index++
+func checkIfPangram(sentence string) bool {
+	if len(sentence) &lt; 26 {
+		return false
+	}
+	for i := &#39;a&#39;; i &lt;= &#39;z&#39;; i++ {
+		if strings.Index(sentence, string(i)) == -1 {
+			return false
 		}
 	}
-	res := strings.Builder{}
-	for _, v := range message {
-		if v == 32 {
-			res.WriteString(&#34; &#34;)
-		} else {
-			res.WriteString(m[v])
-		}
-	}
-	return res.String()
+	return true
 }
 </code></pre><ul>
-<li>寫個測試證明結果是否如預期</li>
+<li>加個測試，看看結果是不是如預期</li>
 </ul>
-<pre tabindex="0"><code>func Test_decodeMessage(t *testing.T) {
-	res := decodeMessage(&#34;the quick brown fox jumps over the lazy dog&#34;, &#34;vkbs bs t suepuv&#34;)
-	fmt.Println(res)
-	assert.Equal(t, &#34;this is a secret&#34;, res)
+<pre tabindex="0"><code>func TestCheckIfPangram(t *testing.T) {
+	assert.Equal(t, true, checkIfPangram(&#34;thequickbrownfoxjumpsoverthelazydog&#34;))
+	assert.Equal(t, false, checkIfPangram(&#34;leetcode&#34;))
 }
 </code></pre><h1 id="參考連結">參考連結<a hidden class="anchor" aria-hidden="true" href="#參考連結">#</a></h1>
 <ul>
-<li><a href="https://leetcode.com/problems/decode-the-message/">原本題目</a></li>
-<li><a href="https://github.com/TonyWu1995/leetcode-go/blob/main/leetcode2325/solution.go">solution</a></li>
+<li><a href="https://leetcode.com/problems/check-if-the-sentence-is-pangram/">原本題目</a></li>
+<li><a href="https://github.com/TonyWu1995/leetcode-go/blob/main/leetcode1832/solution.go">solution</a></li>
 </ul>
 
 
@@ -288,15 +269,15 @@ func decodeMessage(key string, message string) string {
       <li><a href="https://tonywu1995.github.io/tags/go/">go</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://tonywu1995.github.io/leetcode/1832/">
+  <a class="prev" href="https://tonywu1995.github.io/leetcode/1662/">
     <span class="title">« 上一篇</span>
     <br>
-    <span>LeetCode1832 Check if the Sentence Is Pangram</span>
+    <span>LeetCode1662 Check If Two String Arrays are Equivalent</span>
   </a>
-  <a class="next" href="https://tonywu1995.github.io/leetcode/1528/">
+  <a class="next" href="https://tonywu1995.github.io/leetcode/2325/">
     <span class="title">下一篇 »</span>
     <br>
-    <span>LeetCode1528 Shuffle String</span>
+    <span>LeetCode2325 Decode the Message</span>
   </a>
 </nav>
 

@@ -5,7 +5,29 @@
     <link>https://tonywu1995.github.io/tags/go/</link>
     <description>Recent content in go on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 16:16:21 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 16:36:37 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode1662 Check If Two String Arrays are Equivalent</title>
+      <link>https://tonywu1995.github.io/leetcode/1662/</link>
+      <pubDate>Thu, 24 Nov 2022 16:36:37 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/1662/</guid>
+      <description>題目 Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
+A string is represented by an array if the array elements concatenated in order forms the string.
+Example Input: word1 = [&amp;#34;ab&amp;#34;, &amp;#34;c&amp;#34;], word2 = [&amp;#34;a&amp;#34;, &amp;#34;bc&amp;#34;] Output: true Explanation: word1 represents string &amp;#34;ab&amp;#34; + &amp;#34;c&amp;#34; -&amp;gt; &amp;#34;abc&amp;#34; word2 represents string &amp;#34;a&amp;#34; + &amp;#34;bc&amp;#34; -&amp;gt; &amp;#34;abc&amp;#34; The strings are the same, so return true.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode1832 Check if the Sentence Is Pangram</title>
+      <link>https://tonywu1995.github.io/leetcode/1832/</link>
+      <pubDate>Thu, 24 Nov 2022 16:31:05 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/1832/</guid>
+      <description>題目 A pangram is a sentence where every letter of the English alphabet appears at least once.
+Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.
+Example Input: sentence = &amp;#34;thequickbrownfoxjumpsoverthelazydog&amp;#34; Output: true Explanation: sentence contains at least one of every letter of the English alphabet. 題意: sentence中至少要出現一次a-z 解法 import ( &amp;#34;strings&amp;#34; ) func checkIfPangram(sentence string) bool { if len(sentence) &amp;lt; 26 { return false } for i := &amp;#39;a&amp;#39;; i &amp;lt;= &amp;#39;z&amp;#39;; i++ { if strings.</description>
+    </item>
+    
     <item>
       <title>LeetCode2325 Decode the Message</title>
       <link>https://tonywu1995.github.io/leetcode/2325/</link>

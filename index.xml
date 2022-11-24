@@ -5,7 +5,18 @@
     <link>https://tonywu1995.github.io/</link>
     <description>Recent content on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 16:36:37 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Nov 2022 16:49:18 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode1844 Replace All Digits with Characters</title>
+      <link>https://tonywu1995.github.io/leetcode/1844/</link>
+      <pubDate>Thu, 24 Nov 2022 16:49:18 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/1844/</guid>
+      <description>題目 You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.
+There is a function shift(c, x), where c is a character and x is a digit, that returns the xth character after c.
+For example, shift(&amp;lsquo;a&amp;rsquo;, 5) = &amp;lsquo;f&amp;rsquo; and shift(&amp;lsquo;x&amp;rsquo;, 0) = &amp;lsquo;x&amp;rsquo;. For every odd index i, you want to replace the digit s[i] with shift(s[i-1], s[i]).</description>
+    </item>
+    
     <item>
       <title>LeetCode1662 Check If Two String Arrays are Equivalent</title>
       <link>https://tonywu1995.github.io/leetcode/1662/</link>

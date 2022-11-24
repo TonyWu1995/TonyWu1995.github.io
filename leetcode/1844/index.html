@@ -5,13 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>LeetCode1662 Check If Two String Arrays are Equivalent | Tony Wu&#39;s Blog</title>
+<title>LeetCode1844 Replace All Digits with Characters | Tony Wu&#39;s Blog</title>
 <meta name="keywords" content="leetcode, go" />
-<meta name="description" content="題目 Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
-A string is represented by an array if the array elements concatenated in order forms the string.
-Example Input: word1 = [&#34;ab&#34;, &#34;c&#34;], word2 = [&#34;a&#34;, &#34;bc&#34;] Output: true Explanation: word1 represents string &#34;ab&#34; &#43; &#34;c&#34; -&gt; &#34;abc&#34; word2 represents string &#34;a&#34; &#43; &#34;bc&#34; -&gt; &#34;abc&#34; The strings are the same, so return true.">
+<meta name="description" content="題目 You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.
+There is a function shift(c, x), where c is a character and x is a digit, that returns the xth character after c.
+For example, shift(&lsquo;a&rsquo;, 5) = &lsquo;f&rsquo; and shift(&lsquo;x&rsquo;, 0) = &lsquo;x&rsquo;. For every odd index i, you want to replace the digit s[i] with shift(s[i-1], s[i]).">
 <meta name="author" content="Tony">
-<link rel="canonical" href="https://tonywu1995.github.io/leetcode/1662/" />
+<link rel="canonical" href="https://tonywu1995.github.io/leetcode/1844/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -70,20 +70,20 @@ if (!doNotTrack) {
 	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
 }
 </script>
-<meta property="og:title" content="LeetCode1662 Check If Two String Arrays are Equivalent" />
-<meta property="og:description" content="題目 Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
-A string is represented by an array if the array elements concatenated in order forms the string.
-Example Input: word1 = [&#34;ab&#34;, &#34;c&#34;], word2 = [&#34;a&#34;, &#34;bc&#34;] Output: true Explanation: word1 represents string &#34;ab&#34; &#43; &#34;c&#34; -&gt; &#34;abc&#34; word2 represents string &#34;a&#34; &#43; &#34;bc&#34; -&gt; &#34;abc&#34; The strings are the same, so return true." />
+<meta property="og:title" content="LeetCode1844 Replace All Digits with Characters" />
+<meta property="og:description" content="題目 You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.
+There is a function shift(c, x), where c is a character and x is a digit, that returns the xth character after c.
+For example, shift(&lsquo;a&rsquo;, 5) = &lsquo;f&rsquo; and shift(&lsquo;x&rsquo;, 0) = &lsquo;x&rsquo;. For every odd index i, you want to replace the digit s[i] with shift(s[i-1], s[i])." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tonywu1995.github.io/leetcode/1662/" /><meta property="article:section" content="leetcode" />
-<meta property="article:published_time" content="2022-11-24T16:36:37&#43;08:00" />
-<meta property="article:modified_time" content="2022-11-24T16:36:37&#43;08:00" />
+<meta property="og:url" content="https://tonywu1995.github.io/leetcode/1844/" /><meta property="article:section" content="leetcode" />
+<meta property="article:published_time" content="2022-11-24T16:49:18&#43;08:00" />
+<meta property="article:modified_time" content="2022-11-24T16:49:18&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="LeetCode1662 Check If Two String Arrays are Equivalent"/>
-<meta name="twitter:description" content="題目 Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
-A string is represented by an array if the array elements concatenated in order forms the string.
-Example Input: word1 = [&#34;ab&#34;, &#34;c&#34;], word2 = [&#34;a&#34;, &#34;bc&#34;] Output: true Explanation: word1 represents string &#34;ab&#34; &#43; &#34;c&#34; -&gt; &#34;abc&#34; word2 represents string &#34;a&#34; &#43; &#34;bc&#34; -&gt; &#34;abc&#34; The strings are the same, so return true."/>
+<meta name="twitter:title" content="LeetCode1844 Replace All Digits with Characters"/>
+<meta name="twitter:description" content="題目 You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.
+There is a function shift(c, x), where c is a character and x is a digit, that returns the xth character after c.
+For example, shift(&lsquo;a&rsquo;, 5) = &lsquo;f&rsquo; and shift(&lsquo;x&rsquo;, 0) = &lsquo;x&rsquo;. For every odd index i, you want to replace the digit s[i] with shift(s[i-1], s[i])."/>
 
 
 <script type="application/ld+json">
@@ -100,8 +100,8 @@ Example Input: word1 = [&#34;ab&#34;, &#34;c&#34;], word2 = [&#34;a&#34;, &#34;b
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "LeetCode1662 Check If Two String Arrays are Equivalent",
-      "item": "https://tonywu1995.github.io/leetcode/1662/"
+      "name": "LeetCode1844 Replace All Digits with Characters",
+      "item": "https://tonywu1995.github.io/leetcode/1844/"
     }
   ]
 }
@@ -110,24 +110,24 @@ Example Input: word1 = [&#34;ab&#34;, &#34;c&#34;], word2 = [&#34;a&#34;, &#34;b
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "LeetCode1662 Check If Two String Arrays are Equivalent",
-  "name": "LeetCode1662 Check If Two String Arrays are Equivalent",
-  "description": "題目 Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.\nA string is represented by an array if the array elements concatenated in order forms the string.\nExample Input: word1 = [\u0026#34;ab\u0026#34;, \u0026#34;c\u0026#34;], word2 = [\u0026#34;a\u0026#34;, \u0026#34;bc\u0026#34;] Output: true Explanation: word1 represents string \u0026#34;ab\u0026#34; + \u0026#34;c\u0026#34; -\u0026gt; \u0026#34;abc\u0026#34; word2 represents string \u0026#34;a\u0026#34; + \u0026#34;bc\u0026#34; -\u0026gt; \u0026#34;abc\u0026#34; The strings are the same, so return true.",
+  "headline": "LeetCode1844 Replace All Digits with Characters",
+  "name": "LeetCode1844 Replace All Digits with Characters",
+  "description": "題目 You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.\nThere is a function shift(c, x), where c is a character and x is a digit, that returns the xth character after c.\nFor example, shift(\u0026lsquo;a\u0026rsquo;, 5) = \u0026lsquo;f\u0026rsquo; and shift(\u0026lsquo;x\u0026rsquo;, 0) = \u0026lsquo;x\u0026rsquo;. For every odd index i, you want to replace the digit s[i] with shift(s[i-1], s[i]).",
   "keywords": [
     "leetcode", "go"
   ],
-  "articleBody": "題目 Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.\nA string is represented by an array if the array elements concatenated in order forms the string.\nExample Input: word1 = [\"ab\", \"c\"], word2 = [\"a\", \"bc\"] Output: true Explanation: word1 represents string \"ab\" + \"c\" -\u003e \"abc\" word2 represents string \"a\" + \"bc\" -\u003e \"abc\" The strings are the same, so return true. 題意: 比對concat後的字串是否一樣 解法 func arrayStringsAreEqual(word1 []string, word2 []string) bool { return strings.EqualFold(strings.Join(word1, \"\"), strings.Join(word2, \"\")) } 加個測試，看看結果是不是如預期 func Test_arrayStringsAreEqual(t *testing.T) { assert.Equal(t, true, arrayStringsAreEqual([]string{ \"ab\", \"c\", }, []string{ \"a\", \"bc\", })) } 參考連結 原本題目 solution ",
-  "wordCount" : "110",
+  "articleBody": "題目 You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.\nThere is a function shift(c, x), where c is a character and x is a digit, that returns the xth character after c.\nFor example, shift(‘a’, 5) = ‘f’ and shift(‘x’, 0) = ‘x’. For every odd index i, you want to replace the digit s[i] with shift(s[i-1], s[i]).\nReturn s after replacing all digits. It is guaranteed that shift(s[i-1], s[i]) will never exceed ‘z’.\nExample Input: s = \"a1c1e1\" Output: \"abcdef\" Explanation: The digits are replaced as follows: - s[1] -\u003e shift('a',1) = 'b' - s[3] -\u003e shift('c',1) = 'd' - s[5] -\u003e shift('e',1) = 'f' 題意: 字串中有數字就要進行位移 解法 func replaceDigits(s string) string { arr := []byte(s) for i := 1; i \u003c len(s); i += 2 { arr[i] = (arr[i-1] - 'a') + arr[i] - '0' + 'a' } return string(arr) } 加個測試，看看結果是不是如預期 import ( \"github.com/stretchr/testify/assert\" \"testing\" ) func Test_replaceDigits(t *testing.T) { assert.Equal(t, \"abcdef\", replaceDigits(\"a1c1e1\")) } 參考連結 原本題目 solution ",
+  "wordCount" : "174",
   "inLanguage": "zh-tw",
-  "datePublished": "2022-11-24T16:36:37+08:00",
-  "dateModified": "2022-11-24T16:36:37+08:00",
+  "datePublished": "2022-11-24T16:49:18+08:00",
+  "dateModified": "2022-11-24T16:49:18+08:00",
   "author":{
     "@type": "Person",
     "name": "Tony"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://tonywu1995.github.io/leetcode/1662/"
+    "@id": "https://tonywu1995.github.io/leetcode/1844/"
   },
   "publisher": {
     "@type": "Organization",
@@ -215,43 +215,51 @@ Example Input: word1 = [&#34;ab&#34;, &#34;c&#34;], word2 = [&#34;a&#34;, &#34;b
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://tonywu1995.github.io/">首頁</a>&nbsp;»&nbsp;<a href="https://tonywu1995.github.io/leetcode/">Leetcodes</a></div>
     <h1 class="post-title">
-      LeetCode1662 Check If Two String Arrays are Equivalent
+      LeetCode1844 Replace All Digits with Characters
     </h1>
-    <div class="post-meta"><span title='2022-11-24 16:36:37 +0800 +0800'>2022-11-24 November Thursday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony
+    <div class="post-meta"><span title='2022-11-24 16:49:18 +0800 +0800'>2022-11-24 November Thursday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony
 
 </div>
   </header> 
   <div class="post-content"><h1 id="題目">題目<a hidden class="anchor" aria-hidden="true" href="#題目">#</a></h1>
-<p>Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.</p>
-<p>A string is represented by an array if the array elements concatenated in order forms the string.</p>
+<p>You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.</p>
+<p>There is a function shift(c, x), where c is a character and x is a digit, that returns the xth character after c.</p>
+<p>For example, shift(&lsquo;a&rsquo;, 5) = &lsquo;f&rsquo; and shift(&lsquo;x&rsquo;, 0) = &lsquo;x&rsquo;.
+For every odd index i, you want to replace the digit s[i] with shift(s[i-1], s[i]).</p>
+<p>Return s after replacing all digits. It is guaranteed that shift(s[i-1], s[i]) will never exceed &lsquo;z&rsquo;.</p>
 <h2 id="example">Example<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h2>
-<pre tabindex="0"><code>Input: word1 = [&#34;ab&#34;, &#34;c&#34;], word2 = [&#34;a&#34;, &#34;bc&#34;]
-Output: true
-Explanation:
-word1 represents string &#34;ab&#34; + &#34;c&#34; -&gt; &#34;abc&#34;
-word2 represents string &#34;a&#34; + &#34;bc&#34; -&gt; &#34;abc&#34;
-The strings are the same, so return true.
+<pre tabindex="0"><code>Input: s = &#34;a1c1e1&#34;
+Output: &#34;abcdef&#34;
+Explanation: The digits are replaced as follows:
+- s[1] -&gt; shift(&#39;a&#39;,1) = &#39;b&#39;
+- s[3] -&gt; shift(&#39;c&#39;,1) = &#39;d&#39;
+- s[5] -&gt; shift(&#39;e&#39;,1) = &#39;f&#39;
 </code></pre><ul>
-<li>題意: 比對concat後的字串是否一樣</li>
+<li>題意: 字串中有數字就要進行位移</li>
 </ul>
 <h1 id="解法">解法<a hidden class="anchor" aria-hidden="true" href="#解法">#</a></h1>
-<pre tabindex="0"><code>func arrayStringsAreEqual(word1 []string, word2 []string) bool {
-	return strings.EqualFold(strings.Join(word1, &#34;&#34;), strings.Join(word2, &#34;&#34;))
+<pre tabindex="0"><code>func replaceDigits(s string) string {
+	arr := []byte(s)
+	for i := 1; i &lt; len(s); i += 2 {
+		arr[i] = (arr[i-1] - &#39;a&#39;) + arr[i] - &#39;0&#39; + &#39;a&#39;
+	}
+	return string(arr)
 }
 </code></pre><ul>
 <li>加個測試，看看結果是不是如預期</li>
 </ul>
-<pre tabindex="0"><code>func Test_arrayStringsAreEqual(t *testing.T) {
-	assert.Equal(t, true, arrayStringsAreEqual([]string{
-		&#34;ab&#34;, &#34;c&#34;,
-	}, []string{
-		&#34;a&#34;, &#34;bc&#34;,
-	}))
+<pre tabindex="0"><code>import (
+	&#34;github.com/stretchr/testify/assert&#34;
+	&#34;testing&#34;
+)
+
+func Test_replaceDigits(t *testing.T) {
+	assert.Equal(t, &#34;abcdef&#34;, replaceDigits(&#34;a1c1e1&#34;))
 }
 </code></pre><h1 id="參考連結">參考連結<a hidden class="anchor" aria-hidden="true" href="#參考連結">#</a></h1>
 <ul>
-<li><a href="https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/">原本題目</a></li>
-<li><a href="https://github.com/TonyWu1995/leetcode-go/blob/main/leetcode1662/solution.go">solution</a></li>
+<li><a href="https://leetcode.com/problems/replace-all-digits-with-characters/">原本題目</a></li>
+<li><a href="https://github.com/TonyWu1995/leetcode-go/blob/main/leetcode1844/solution.go">solution</a></li>
 </ul>
 
 
@@ -263,15 +271,10 @@ The strings are the same, so return true.
       <li><a href="https://tonywu1995.github.io/tags/go/">go</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://tonywu1995.github.io/leetcode/1844/">
-    <span class="title">« 上一篇</span>
-    <br>
-    <span>LeetCode1844 Replace All Digits with Characters</span>
-  </a>
-  <a class="next" href="https://tonywu1995.github.io/leetcode/1832/">
+  <a class="next" href="https://tonywu1995.github.io/leetcode/1662/">
     <span class="title">下一篇 »</span>
     <br>
-    <span>LeetCode1832 Check if the Sentence Is Pangram</span>
+    <span>LeetCode1662 Check If Two String Arrays are Equivalent</span>
   </a>
 </nav>
 

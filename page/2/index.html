@@ -164,6 +164,20 @@ if (!doNotTrack) {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>SSH_Tunnel
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>前言 使用到 SSH Tunnel 情境
+這裡有一台Server，上面架設一個Postgres，因為公司資安的關係，並不對外開啟port:5432 我們目前在Local開發一個服務，需要連線到Server上的Postgres，不太可能每次改完程式，部署上去測試，這樣來回時間會拉很長
+主要內容 ssh -L [local_ip]:[local_port]:[host_ip]:[host_port] username@host local_ip :本地ip位置，預設綁定本機 local_port:本地開啟port host_ip:遠端Server ip host_port:遠端要轉發port L: 建立Tunnel Example ssh -L 5432:localhost:5432 tony@123.456.789.10 參考連結 SSH Tunnel 突破防火牆限制 </p>
+  </section>
+  <footer class="entry-footer"><span title='2022-05-27 22:59:35 +0800 +0800'>2022-05-27 May Friday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
+  <a class="entry-link" aria-label="post link to SSH_Tunnel" href="https://tonywu1995.github.io/devops/ssh_tunnel/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Node Exporter安裝
     </h2>
   </header>

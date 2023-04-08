@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>MQTT Server - EMQP建立 | Tony Wu&#39;s Blog</title>
 <meta name="keywords" content="devops, docker, mqtt, iot" />
-<meta name="description" content="前言 市面上MQTT Sever 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [&#34;CMD&#34;, &#34;/opt/emqx/bin/emqx_ctl&#34;, &#34;status&#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX ">
+<meta name="description" content="前言 市面上MQTT Server 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [&#34;CMD&#34;, &#34;/opt/emqx/bin/emqx_ctl&#34;, &#34;status&#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX ">
 <meta name="author" content="Tony">
 <link rel="canonical" href="https://tonywu1995.github.io/devops/emqx/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
@@ -69,7 +69,7 @@ if (!doNotTrack) {
 }
 </script>
 <meta property="og:title" content="MQTT Server - EMQP建立" />
-<meta property="og:description" content="前言 市面上MQTT Sever 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [&#34;CMD&#34;, &#34;/opt/emqx/bin/emqx_ctl&#34;, &#34;status&#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX " />
+<meta property="og:description" content="前言 市面上MQTT Server 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [&#34;CMD&#34;, &#34;/opt/emqx/bin/emqx_ctl&#34;, &#34;status&#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonywu1995.github.io/devops/emqx/" /><meta property="article:section" content="devops" />
 <meta property="article:published_time" content="2023-04-08T19:53:48&#43;08:00" />
@@ -77,7 +77,7 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MQTT Server - EMQP建立"/>
-<meta name="twitter:description" content="前言 市面上MQTT Sever 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [&#34;CMD&#34;, &#34;/opt/emqx/bin/emqx_ctl&#34;, &#34;status&#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX "/>
+<meta name="twitter:description" content="前言 市面上MQTT Server 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [&#34;CMD&#34;, &#34;/opt/emqx/bin/emqx_ctl&#34;, &#34;status&#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX "/>
 
 
 <script type="application/ld+json">
@@ -106,11 +106,11 @@ if (!doNotTrack) {
   "@type": "BlogPosting",
   "headline": "MQTT Server - EMQP建立",
   "name": "MQTT Server - EMQP建立",
-  "description": "前言 市面上MQTT Sever 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: \u0026#39;3\u0026#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [\u0026#34;CMD\u0026#34;, \u0026#34;/opt/emqx/bin/emqx_ctl\u0026#34;, \u0026#34;status\u0026#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX ",
+  "description": "前言 市面上MQTT Server 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: \u0026#39;3\u0026#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [\u0026#34;CMD\u0026#34;, \u0026#34;/opt/emqx/bin/emqx_ctl\u0026#34;, \u0026#34;status\u0026#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX ",
   "keywords": [
     "devops", "docker", "mqtt", "iot"
   ],
-  "articleBody": "前言 市面上MQTT Sever 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: '3' services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [\"CMD\", \"/opt/emqx/bin/emqx_ctl\", \"status\"] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX ",
+  "articleBody": "前言 市面上MQTT Server 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: '3' services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [\"CMD\", \"/opt/emqx/bin/emqx_ctl\", \"status\"] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX ",
   "wordCount" : "67",
   "inLanguage": "zh-tw",
   "datePublished": "2023-04-08T19:53:48+08:00",
@@ -217,7 +217,7 @@ if (!doNotTrack) {
   </header> 
   <div class="post-content"><h1 id="前言">前言<a hidden class="anchor" aria-hidden="true" href="#前言">#</a></h1>
 <ul>
-<li>市面上MQTT Sever 有很多種，例如:
+<li>市面上MQTT Server 有很多種，例如:
 <ul>
 <li>EMQX</li>
 <li>Mosquitto</li>

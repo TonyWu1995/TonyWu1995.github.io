@@ -157,7 +157,7 @@ if (!doNotTrack) {
     </h2>
   </header>
   <section class="entry-content">
-    <p>前言 市面上MQTT Sever 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [&#34;CMD&#34;, &#34;/opt/emqx/bin/emqx_ctl&#34;, &#34;status&#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX </p>
+    <p>前言 市面上MQTT Server 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &#39;3&#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [&#34;CMD&#34;, &#34;/opt/emqx/bin/emqx_ctl&#34;, &#34;status&#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX </p>
   </section>
   <footer class="entry-footer"><span title='2023-04-08 19:53:48 +0800 +0800'>2023-04-08 April Saturday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
   <a class="entry-link" aria-label="post link to MQTT Server - EMQP建立" href="https://tonywu1995.github.io/devops/emqx/"></a>

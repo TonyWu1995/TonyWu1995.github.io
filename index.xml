@@ -5,7 +5,16 @@
     <link>https://tonywu1995.github.io/</link>
     <description>Recent content on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 16:49:18 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Apr 2023 19:53:48 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MQTT Server - EMQP建立</title>
+      <link>https://tonywu1995.github.io/devops/emqx/</link>
+      <pubDate>Sat, 08 Apr 2023 19:53:48 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/devops/emqx/</guid>
+      <description>前言 市面上MQTT Sever 有很多種，例如: EMQX Mosquitto 這次我們透過docker來建立IOT傳輸用的MQTT Sever EMQX 步驟 建立一個新的folder，命名emqx 在emqx目錄底下，建立名為data資料夾，用來存放eqmx資料 在emqx目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &amp;#39;3&amp;#39; services: emqx: image: emqx:5.0.20 container_name: emqx healthcheck: test: [&amp;#34;CMD&amp;#34;, &amp;#34;/opt/emqx/bin/emqx_ctl&amp;#34;, &amp;#34;status&amp;#34;] interval: 5s timeout: 25s retries: 5 ports: - 1883:1883 ## tcp - 8083:8083 ## websockeet - 8084:8084 ## websocket ssl - 8883:8883 ## ssl - 18083:18083 ## web volumes: - ./data:/opt/emqx/data 執行docker-compose up -d，即可啟動emqx 打開browser，在localhost:18083即可看到啟動好的emqx，如下圖 預設帳密為: admin/public 參考連結 EQMX </description>
+    </item>
+    
     <item>
       <title>LeetCode1844 Replace All Digits with Characters</title>
       <link>https://tonywu1995.github.io/leetcode/1844/</link>
@@ -85,7 +94,7 @@ Input: address = &amp;#34;1.1.1.1&amp;#34; Output: &amp;#34;1[.]1[.]1[.]1&amp;#3
     </item>
     
     <item>
-      <title>Redis Exporter安裝</title>
+      <title>Redis Exporter建立</title>
       <link>https://tonywu1995.github.io/prometheus/redis-exporter/</link>
       <pubDate>Mon, 31 Oct 2022 21:22:46 +0800</pubDate>
       
@@ -96,7 +105,7 @@ Input: address = &amp;#34;1.1.1.1&amp;#34; Output: &amp;#34;1[.]1[.]1[.]1&amp;#3
     </item>
     
     <item>
-      <title>Redis安裝</title>
+      <title>Redis建立</title>
       <link>https://tonywu1995.github.io/redis/redis/</link>
       <pubDate>Sun, 30 Oct 2022 19:37:19 +0800</pubDate>
       
@@ -104,7 +113,7 @@ Input: address = &amp;#34;1.1.1.1&amp;#34; Output: &amp;#34;1[.]1[.]1[.]1&amp;#3
       <description>介紹 Redis 是一個開源的in memory key value cache,常用來降低服務內的延遲情況
 Redis 支援的data type
 Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfields 現在讓我們開始安裝Redis
-安裝 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &amp;#39;3&amp;#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動
+建立 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &amp;#39;3&amp;#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動
 確認redis服務，已經在執行
 λ docker exec -it redis sh /data # redis-cli 127.0.0.1:6379&amp;gt; ping PONG 127.0.0.1:6379&amp;gt; exit /data # redis-cli ping PONG /data # 小結 redis 已經安裝完成，下一章節將會開始使用java連接redis 參考連結 Redis </description>
     </item>
@@ -132,7 +141,7 @@ Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfi
     </item>
     
     <item>
-      <title>Node Exporter安裝</title>
+      <title>Node Exporter建立</title>
       <link>https://tonywu1995.github.io/prometheus/node-exporter/</link>
       <pubDate>Sun, 03 Oct 2021 16:25:57 +0800</pubDate>
       

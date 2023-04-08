@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Node Exporter安裝 | Tony Wu&#39;s Blog</title>
+<title>Node Exporter建立 | Tony Wu&#39;s Blog</title>
 <meta name="keywords" content="devops, prometheus" />
 <meta name="description" content="前言 node exporter是用來監控Linux vm的一個Prometheus Client 提供: CPU 使用率、硬碟使用率&hellip; metrics 步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bash version=&#34;${VERSION:-1.2.2}&#34; arch=&#34;${ARCH:-linux-amd64}&#34; bin_dir=&#34;${BIN_DIR:-/usr/local/bin}&#34; wget &#34;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&#34; \ -O /tmp/node_exporter.tar.gz mkdir -p /tmp/node_exporter cd /tmp || { echo &#34;ERROR! No /tmp found..&#34;; exit 1; } tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &#34;ERROR! Extracting the node_exporter tar&#34;; exit 1; } sudo cp &#34;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&#34; &#34;$bin_dir&#34; chown root:staff &#34;$bin_dir/node_exporter&#34; sudo cat &lt;&lt;EOF &gt; /etc/systemd/system/node_exporter.service [Unit] Description=Node Exporter After=network.target [Service] Type=simple ExecStart=/usr/local/bin/node_exporter [Install] WantedBy=multi-user.">
 <meta name="author" content="Tony">
@@ -20,7 +20,7 @@
 <link rel="mask-icon" href="https://tonywu1995.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.106.0">
+<meta name="generator" content="Hugo 0.111.3">
 <noscript>
     <style>
         #theme-toggle,
@@ -68,7 +68,7 @@ if (!doNotTrack) {
 	gtag('config', 'G-KB56NB3G32', { 'anonymize_ip': false });
 }
 </script>
-<meta property="og:title" content="Node Exporter安裝" />
+<meta property="og:title" content="Node Exporter建立" />
 <meta property="og:description" content="前言 node exporter是用來監控Linux vm的一個Prometheus Client 提供: CPU 使用率、硬碟使用率&hellip; metrics 步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bash version=&#34;${VERSION:-1.2.2}&#34; arch=&#34;${ARCH:-linux-amd64}&#34; bin_dir=&#34;${BIN_DIR:-/usr/local/bin}&#34; wget &#34;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&#34; \ -O /tmp/node_exporter.tar.gz mkdir -p /tmp/node_exporter cd /tmp || { echo &#34;ERROR! No /tmp found..&#34;; exit 1; } tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &#34;ERROR! Extracting the node_exporter tar&#34;; exit 1; } sudo cp &#34;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&#34; &#34;$bin_dir&#34; chown root:staff &#34;$bin_dir/node_exporter&#34; sudo cat &lt;&lt;EOF &gt; /etc/systemd/system/node_exporter.service [Unit] Description=Node Exporter After=network.target [Service] Type=simple ExecStart=/usr/local/bin/node_exporter [Install] WantedBy=multi-user." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tonywu1995.github.io/prometheus/node-exporter/" /><meta property="article:section" content="prometheus" />
@@ -76,7 +76,7 @@ if (!doNotTrack) {
 <meta property="article:modified_time" content="2021-10-03T16:25:57&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Node Exporter安裝"/>
+<meta name="twitter:title" content="Node Exporter建立"/>
 <meta name="twitter:description" content="前言 node exporter是用來監控Linux vm的一個Prometheus Client 提供: CPU 使用率、硬碟使用率&hellip; metrics 步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bash version=&#34;${VERSION:-1.2.2}&#34; arch=&#34;${ARCH:-linux-amd64}&#34; bin_dir=&#34;${BIN_DIR:-/usr/local/bin}&#34; wget &#34;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&#34; \ -O /tmp/node_exporter.tar.gz mkdir -p /tmp/node_exporter cd /tmp || { echo &#34;ERROR! No /tmp found..&#34;; exit 1; } tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &#34;ERROR! Extracting the node_exporter tar&#34;; exit 1; } sudo cp &#34;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&#34; &#34;$bin_dir&#34; chown root:staff &#34;$bin_dir/node_exporter&#34; sudo cat &lt;&lt;EOF &gt; /etc/systemd/system/node_exporter.service [Unit] Description=Node Exporter After=network.target [Service] Type=simple ExecStart=/usr/local/bin/node_exporter [Install] WantedBy=multi-user."/>
 
 
@@ -94,7 +94,7 @@ if (!doNotTrack) {
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Node Exporter安裝",
+      "name": "Node Exporter建立",
       "item": "https://tonywu1995.github.io/prometheus/node-exporter/"
     }
   ]
@@ -104,8 +104,8 @@ if (!doNotTrack) {
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Node Exporter安裝",
-  "name": "Node Exporter安裝",
+  "headline": "Node Exporter建立",
+  "name": "Node Exporter建立",
   "description": "前言 node exporter是用來監控Linux vm的一個Prometheus Client 提供: CPU 使用率、硬碟使用率\u0026hellip; metrics 步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bash version=\u0026#34;${VERSION:-1.2.2}\u0026#34; arch=\u0026#34;${ARCH:-linux-amd64}\u0026#34; bin_dir=\u0026#34;${BIN_DIR:-/usr/local/bin}\u0026#34; wget \u0026#34;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz\u0026#34; \\ -O /tmp/node_exporter.tar.gz mkdir -p /tmp/node_exporter cd /tmp || { echo \u0026#34;ERROR! No /tmp found..\u0026#34;; exit 1; } tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo \u0026#34;ERROR! Extracting the node_exporter tar\u0026#34;; exit 1; } sudo cp \u0026#34;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter\u0026#34; \u0026#34;$bin_dir\u0026#34; chown root:staff \u0026#34;$bin_dir/node_exporter\u0026#34; sudo cat \u0026lt;\u0026lt;EOF \u0026gt; /etc/systemd/system/node_exporter.service [Unit] Description=Node Exporter After=network.target [Service] Type=simple ExecStart=/usr/local/bin/node_exporter [Install] WantedBy=multi-user.",
   "keywords": [
     "devops", "prometheus"
@@ -209,7 +209,7 @@ if (!doNotTrack) {
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://tonywu1995.github.io/">首頁</a>&nbsp;»&nbsp;<a href="https://tonywu1995.github.io/prometheus/">Prometheuses</a></div>
     <h1 class="post-title">
-      Node Exporter安裝
+      Node Exporter建立
     </h1>
     <div class="post-meta"><span title='2021-10-03 16:25:57 +0800 +0800'>2021-10-03 October Sunday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony
 
@@ -292,7 +292,7 @@ echo &#34;SUCCESS! Installation succeeded!&#34;
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://tonywu1995.github.io/">Tony Wu&#39;s Blog</a></span>
+    <span>&copy; 2023 <a href="https://tonywu1995.github.io/">Tony Wu&#39;s Blog</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

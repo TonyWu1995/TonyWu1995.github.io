@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 30 Oct 2022 19:37:19 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/redis/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Redis安裝</title>
+      <title>Redis建立</title>
       <link>https://tonywu1995.github.io/redis/redis/</link>
       <pubDate>Sun, 30 Oct 2022 19:37:19 +0800</pubDate>
       
@@ -15,7 +15,7 @@
       <description>介紹 Redis 是一個開源的in memory key value cache,常用來降低服務內的延遲情況
 Redis 支援的data type
 Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfields 現在讓我們開始安裝Redis
-安裝 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &amp;#39;3&amp;#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動
+建立 Redis 建立一個新的folder，命名redis-server 在redis-server目錄底下，建立docker-compose.yml docker-compose.yml 底下輸入 version: &amp;#39;3&amp;#39; services: redis: restart: always container_name: redis image: redis:6.2.7-alpine ports: - 6379:6379 執行docker-compose up -d，redis服務即可啟動
 確認redis服務，已經在執行
 λ docker exec -it redis sh /data # redis-cli 127.0.0.1:6379&amp;gt; ping PONG 127.0.0.1:6379&amp;gt; exit /data # redis-cli ping PONG /data # 小結 redis 已經安裝完成，下一章節將會開始使用java連接redis 參考連結 Redis </description>
     </item>

@@ -5,7 +5,29 @@
     <link>https://tonywu1995.github.io/tags/go/</link>
     <description>Recent content in go on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Nov 2022 16:49:18 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Apr 2023 21:58:41 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode704 Binary Search</title>
+      <link>https://tonywu1995.github.io/leetcode/704/</link>
+      <pubDate>Sat, 15 Apr 2023 21:58:41 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/704/</guid>
+      <description>題目 Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+You must write an algorithm with O(log n) runtime complexity.
+題意: 在nums陣列中找出等於target的index值 ，並且時間複雜度須為O(log n) 解法 題目要求: 時間複雜度為 O(log n) ，所以可以使用Binary Search 方法來找出index func search(nums []int, target int) int { start := 0 end := len(nums) - 1 for start &amp;lt;= end { mid := start + (end-start)/2 if nums[mid] == target { return mid } else if nums[mid] &amp;gt; target { end = mid - 1 } else { start = mid + 1 } } return -1 } 加些測試，看看結果是不是如預期 import ( &amp;#34;github.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode35 Search Insert Position</title>
+      <link>https://tonywu1995.github.io/leetcode/35/</link>
+      <pubDate>Sat, 15 Apr 2023 21:49:00 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/35/</guid>
+      <description>題目 Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+You must write an algorithm with O(log n) runtime complexity.
+題意: 找出相近的nums array中的index ，並且時間複雜度須為O(log n) 解法 題目要求: 時間複雜度為 O(log n) ，所以可以使用Binary Search 方法來找出index func searchInsert(nums []int, target int) int { start := 0 end := len(nums) - 1 for start &amp;lt;= end { mid := start + (end-start)/2 if nums[mid] == target { return mid } else if nums[mid] &amp;gt; target { end = mid - 1 } else { start = mid + 1 } } return start } 加些測試，看看結果是不是如預期 import ( &amp;#34;github.</description>
+    </item>
+    
     <item>
       <title>LeetCode1844 Replace All Digits with Characters</title>
       <link>https://tonywu1995.github.io/leetcode/1844/</link>

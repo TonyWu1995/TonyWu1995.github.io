@@ -177,6 +177,19 @@ if (!doNotTrack) {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>Leetcode557 Reverse Words in a String III
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>題目 Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+解法 import ( &#34;strings&#34; ) func reverseWords(s string) string { split := strings.Split(s, &#34; &#34;) res := &#34;&#34; for _, v := range split { res = res &#43; reverse(v) &#43; &#34; &#34; } return strings.Trim(res, &#34; &#34;) } func reverse(s string) string { var str string for _, v := range s { str = string(v) &#43; str } return str } 加些測試，看看結果是不是如預期 func Test_reverseWords(t *testing....</p>
+  </section>
+  <footer class="entry-footer"><span title='2023-04-18 21:29:07 +0800 +0800'>2023-04-18 April Tuesday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
+  <a class="entry-link" aria-label="post link to Leetcode557 Reverse Words in a String III" href="https://tonywu1995.github.io/leetcode/557/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Leetcode704 Binary Search
     </h2>
   </header>
@@ -371,18 +384,6 @@ Strings Lists Sets Hash Sroted sets Streams Geospatial HyperLogLog Bitmaps Bitfi
   </section>
   <footer class="entry-footer"><span title='2022-05-27 22:59:35 +0800 +0800'>2022-05-27 May Friday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
   <a class="entry-link" aria-label="post link to SSH_Tunnel" href="https://tonywu1995.github.io/devops/ssh_tunnel/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Node Exporter建立
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>前言 node exporter是用來監控Linux vm的一個Prometheus Client 提供: CPU 使用率、硬碟使用率… metrics 步驟 安裝Node Exporter在Ubuntu20.04 #!/bin/bash version=&#34;${VERSION:-1.2.2}&#34; arch=&#34;${ARCH:-linux-amd64}&#34; bin_dir=&#34;${BIN_DIR:-/usr/local/bin}&#34; wget &#34;https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.$arch.tar.gz&#34; \ -O /tmp/node_exporter.tar.gz mkdir -p /tmp/node_exporter cd /tmp || { echo &#34;ERROR! No /tmp found..&#34;; exit 1; } tar xfz /tmp/node_exporter.tar.gz -C /tmp/node_exporter || { echo &#34;ERROR! Extracting the node_exporter tar&#34;; exit 1; } sudo cp &#34;/tmp/node_exporter/node_exporter-$version.$arch/node_exporter&#34; &#34;$bin_dir&#34; chown root:staff &#34;$bin_dir/node_exporter&#34; sudo cat &lt;&lt;EOF &gt; /etc/systemd/system/node_exporter.service [Unit] Description=Node Exporter After=network.target [Service] Type=simple ExecStart=/usr/local/bin/node_exporter [Install] WantedBy=multi-user....</p>
-  </section>
-  <footer class="entry-footer"><span title='2021-10-03 16:25:57 +0800 +0800'>2021-10-03 October Sunday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
-  <a class="entry-link" aria-label="post link to Node Exporter建立" href="https://tonywu1995.github.io/prometheus/node-exporter/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

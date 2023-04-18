@@ -5,7 +5,17 @@
     <link>https://tonywu1995.github.io/tags/leetcode/</link>
     <description>Recent content in leetcode on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 15 Apr 2023 21:58:41 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Apr 2023 21:29:07 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode557 Reverse Words in a String III</title>
+      <link>https://tonywu1995.github.io/leetcode/557/</link>
+      <pubDate>Tue, 18 Apr 2023 21:29:07 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/557/</guid>
+      <description>題目 Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+解法 import ( &amp;#34;strings&amp;#34; ) func reverseWords(s string) string { split := strings.Split(s, &amp;#34; &amp;#34;) res := &amp;#34;&amp;#34; for _, v := range split { res = res + reverse(v) + &amp;#34; &amp;#34; } return strings.Trim(res, &amp;#34; &amp;#34;) } func reverse(s string) string { var str string for _, v := range s { str = string(v) + str } return str } 加些測試，看看結果是不是如預期 func Test_reverseWords(t *testing.</description>
+    </item>
+    
     <item>
       <title>Leetcode704 Binary Search</title>
       <link>https://tonywu1995.github.io/leetcode/704/</link>

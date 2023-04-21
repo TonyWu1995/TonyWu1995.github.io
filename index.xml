@@ -5,7 +5,18 @@
     <link>https://tonywu1995.github.io/</link>
     <description>Recent content on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 21 Apr 2023 18:00:24 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Apr 2023 18:19:27 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode228 Summary Ranges</title>
+      <link>https://tonywu1995.github.io/leetcode/228/</link>
+      <pubDate>Fri, 21 Apr 2023 18:19:27 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/228/</guid>
+      <description>題目 You are given a sorted unique integer array nums.
+A range [a,b] is the set of all integers from a to b (inclusive).
+Return the smallest sorted list of ranges that cover all the numbers in the array exactly. That is, each element of nums is covered by exactly one of the ranges, and there is no integer x such that x is in one of the ranges but not in nums.</description>
+    </item>
+    
     <item>
       <title>LeetCode290 Word Pattern</title>
       <link>https://tonywu1995.github.io/leetcode/290/</link>

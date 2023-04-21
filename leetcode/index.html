@@ -168,6 +168,20 @@ if (!doNotTrack) {
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>LeetCode290 Word Pattern
+    </h2>
+  </header>
+  <section class="entry-content">
+    <p>題目 Given a pattern and a string s, find if s follows the same pattern.
+Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
+解法 找出pattern字串與s字串對應，並且轉換過去，且pattern對應的s不可重複，即可解答 import ( &#34;strings&#34; ) func wordPattern(pattern string, s string) bool { m := make(map[string]string) splitString := strings.Split(s, &#34; &#34;) patternString := strings.Split(pattern, &#34;&#34;) if len(splitString) != len(patternString) { return false } for i := 0; i &lt; len(splitString); i&#43;&#43; { if _, ok := m[patternString[i]]; !...</p>
+  </section>
+  <footer class="entry-footer"><span title='2023-04-21 18:00:24 +0800 +0800'>2023-04-21 April Friday</span>&nbsp;·&nbsp;1 分鐘&nbsp;·&nbsp;Tony</footer>
+  <a class="entry-link" aria-label="post link to LeetCode290 Word Pattern" href="https://tonywu1995.github.io/leetcode/290/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>Leetcode557 Reverse Words in a String III
     </h2>
   </header>

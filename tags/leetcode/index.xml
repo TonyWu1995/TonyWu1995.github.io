@@ -5,7 +5,18 @@
     <link>https://tonywu1995.github.io/tags/leetcode/</link>
     <description>Recent content in leetcode on Tony Wu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Apr 2023 21:29:07 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Apr 2023 18:00:24 +0800</lastBuildDate><atom:link href="https://tonywu1995.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode290 Word Pattern</title>
+      <link>https://tonywu1995.github.io/leetcode/290/</link>
+      <pubDate>Fri, 21 Apr 2023 18:00:24 +0800</pubDate>
+      
+      <guid>https://tonywu1995.github.io/leetcode/290/</guid>
+      <description>題目 Given a pattern and a string s, find if s follows the same pattern.
+Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
+解法 找出pattern字串與s字串對應，並且轉換過去，且pattern對應的s不可重複，即可解答 import ( &amp;#34;strings&amp;#34; ) func wordPattern(pattern string, s string) bool { m := make(map[string]string) splitString := strings.Split(s, &amp;#34; &amp;#34;) patternString := strings.Split(pattern, &amp;#34;&amp;#34;) if len(splitString) != len(patternString) { return false } for i := 0; i &amp;lt; len(splitString); i++ { if _, ok := m[patternString[i]]; !</description>
+    </item>
+    
     <item>
       <title>Leetcode557 Reverse Words in a String III</title>
       <link>https://tonywu1995.github.io/leetcode/557/</link>
